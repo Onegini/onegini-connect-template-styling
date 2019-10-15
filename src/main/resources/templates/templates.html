@@ -1,0 +1,48 @@
+<!--
+  ~ Copyright 2019 Onegini B.V.
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Onegini Template styling</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+</head>
+<body>
+<h1>Onegini Template styling</h1>
+<th:block th:if="${#lists.isEmpty(templatePaths)}">
+  <p>
+    Add configuration files to the directory
+    <th:block th:text="${templatePathsLocation}"/>
+    to render templates.
+  </p>
+</th:block>
+<th:block th:unless="${#lists.isEmpty(templatePaths)}">
+  <p>
+    Render one of the following templates:
+  </p>
+
+  <ul>
+    <th:block th:each="templatePath:${templatePaths}">
+      <li><a th:href="@{/render(template=${templatePath})}" th:text="${templatePath}"></a></li>
+    </th:block>
+  </ul>
+</th:block>
+
+</body>
+</html>

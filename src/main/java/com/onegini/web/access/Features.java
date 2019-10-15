@@ -1,0 +1,67 @@
+/*
+ * Copyright 2019 Onegini B.V.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+package com.onegini.web.access;
+
+public enum Features {
+
+  SIGN_UP,
+  STEP_UP_EXTERNALLY_DELIVERED_CODE,
+  LOGIN,
+  PERSON_API,
+  CREDENTIALS_API,
+  EVENTS_API,
+  STATISTICS_API,
+  CONFIGURATION_API,
+  SESSION_API,
+  MIGRATION,
+  UNAUTHENTICATED_MIGRATION,
+  PERSON_ACTIVATION,
+  ACCEPTING_INVITATION,
+  ID_CHECK,
+  PIN,
+  SMS,
+  TOTP,
+  MOBILE_AUTH,
+  ACTION_TOKEN,
+  ACTION_TOKEN_LINK,
+  ACTION_TOKEN_APP2WEB,
+  ACTION_TOKEN_COUPLING,
+  INVITATION_VERIFICATION_BIRTHDATE,
+  INVITATION_VERIFICATION_SMS,
+  INVITATION_VERIFICATION_EXTERNAL_CODE,
+  EMAIL_VERIFICATION,
+  EMAIL_VERIFICATION_REQUIRED,
+  MOBILE_NUMBER_VERIFICATION,
+  EMAIL_CONFIRMATION,
+  MOBILE_NUMBER_CONFIRMATION,
+  PERSON_NAME_MANDATORY,
+  SMS_PASSWORD_RESET,
+  SMS_USERNAME_REMINDER,
+  MOBILE_NUMBER_VALIDATION,
+  ENRICH_ATTRIBUTES_AFTER_SECOND_LOGIN,
+  MOBILE_NUMBER_MANDATORY,
+  MOBILE_NUMBER_SIGNUP_FORM_PRESENT,
+  DASHBOARD_SHOW_NAME,
+  COOKIE_BASED_SAML_AUTHENTICATION,
+  AUTOMATIC_SIGN_UP_EXTERNAL_IDP,
+  COUPLE_MULTIPLE_SOCIAL_ACCOUNTS,
+  EXTERNALLY_DELIVERED_PERSON_ID,
+  CUSTOM_EMAIL_VALIDATION,
+  SIGN_UP_WITHOUT_INVITATION_VALIDATION,
+  UI_EXTENSION_LOGIN;
+
+}

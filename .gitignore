@@ -1,0 +1,43 @@
+### docker-config
+/common/
+# Maven build files
+target/
+
+# Eclipse/VS Code project files
+.classpath
+.project
+.settings
+.factorypath
+.vscode/
+
+# Intellij project files
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# Intellij plugin files
+atlassian-ide-plugin.xml
+
+# Filesystem Files
+*.DS_Store
+*.log
+/onegini-war/es-data
+
+# Onegini
+src/main/ops/tmp/
+
+# Gitbook
+/docs/_book
+/docs/node_modules
+
+/docs-internal/_book
+/docs-internal/node_modules
+gitlab-tools/local-gitlab-runner/.vagrant
+gitlab-tools/local-gitlab-runner/*.log
+gitlab-tools/itest_farm.out
+gitlab-tools/__pycache__/*
+
+# Gulp
+/gulp/node_modules
+/gulp/config.json
