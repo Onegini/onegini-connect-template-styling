@@ -70,7 +70,7 @@ public class ModelMapService {
 
   private String determineYamlFileName(final String templateName) {
     return stylingProperties.getTemplateConfigLocation() + "/" +
-        templateName.replace("/", "_") +
+        templateName.replace("/", "__") +
         ".yaml";
   }
 
