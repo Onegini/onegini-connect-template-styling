@@ -1,3 +1,4 @@
+#!! THIS DOESNT WORK YET !!
 selectBankForm:
   !!com.onegini.styling.mocked.model.SelectBankForm
   selectedIssuerId: 0

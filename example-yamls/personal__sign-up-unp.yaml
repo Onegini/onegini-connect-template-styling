@@ -15,6 +15,9 @@ signUpUnPForm:
   !!com.onegini.styling.mocked.model.SignUpUnPForm
   firstName:
   lastName:
+  birthDateDay:
+  birthDateMonth:
+  birthDateYear:
   mobileNumber:
   mobileNumberConfirmation:
   pin:

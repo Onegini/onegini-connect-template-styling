@@ -15,7 +15,7 @@ verificationRequired: true
 oauthEmailPresent: true
 migrationMessage:
 signUpForm:
-  !!com.onegini.styling.mocked.model.SignUpForm  
+  !!com.onegini.styling.mocked.model.SignUpUnPForm  
   lastName: Veerman
   email:
   emailConfirmation:
