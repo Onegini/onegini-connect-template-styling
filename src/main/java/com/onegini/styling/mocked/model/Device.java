@@ -25,8 +25,8 @@ public class Device {
     private String id;
     private String name;
     private String platform;
-    private Boolean mobileAppInstance;
-    private Boolean pushAuthenticationEnabled;
+    private boolean mobileAppInstance;
+    private boolean pushAuthenticationEnabled;
     private Date lastLogin;
     private Date created;
     private Date authorizedOn;

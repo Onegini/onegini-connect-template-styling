@@ -1,0 +1,12 @@
+trustedDevice: true
+retryStepUp: true
+pinRemainingAttempts: 3
+stepUpMethod:
+  value: sms
+  # value: email
+stepUpAlternatives:
+  pin: pin
+  sms: sms
+  email: email
+  timeBasedOneTimePassword: timeBasedOneTimePassword
+  mobileAuthentication: mobileAuthentication

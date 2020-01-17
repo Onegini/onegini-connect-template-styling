@@ -1,5 +1,6 @@
+formSubmitPath: submit
 formObject:
   !!com.onegini.styling.mocked.model.BirthDateForm
-  birthDateDay: 
-  birthDateMonth: 
-  birthDateYear: 
+  birthDateDay:
+  birthDateMonth:
+  birthDateYear:

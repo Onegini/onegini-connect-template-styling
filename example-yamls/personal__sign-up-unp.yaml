@@ -1,34 +1,73 @@
-isPinEnabled: false
-showMobile: false
 organisation:
-  !!com.onegini.styling.mocked.model.Organisation
-  id: 1
-  name: Salarize
-  hasLogo: true
-  hasLogoLandscape: true
-  hasNoLogoLandscape: false
-isEmailConfirmationEnabled: false 
-cancelTo: /personal/signup/cancel
+isMigratingUser: false
+migrationLoginFlow: false
+displayNameFields: true
+displayMobileNrOrPin: true
+displayGender: false
+displayBirthDay: false
+personName: Henk
+showMobile: true
+isMobileNumberConfirmationEnabled: true
+isPinEnabled: true
+isEmailConfirmationEnabled: true
+showExtendedFields: true
 signUpUnPForm:
   !!com.onegini.styling.mocked.model.SignUpUnPForm
   firstName:
   lastName:
-  dateOfBirth:
-  postalCode:
-  bankNo:
-  email: abc@def.ghi
-  emailConfirmation: false
+  mobileNumber:
+  mobileNumberConfirmation:
+  pin:
+  confirmPin:
+  gender:
+  email:
+  emailConfirmation:
   password:
   confirmPassword:
-  newsletter: true
-  termsOfUse: true
+  termsOfUse: false
+  address:
+    companyName:
+    attention:
+    streetName:
+    houseNumber: 0
+    houseNumberAddition:
+    postalCode:
+    city:
+    region:
+    country:
+  billingIsShippingAddress: false
+  addressAlt1:
+    companyName:
+    attention:
+    streetName:
+    houseNumber: 0
+    houseNumberAddition:
+    postalCode:
+    city:
+    region:
+    country:
 attributeContract:
-  EMAIL:
-    !!com.onegini.styling.mocked.model.OrganisationAttribute
-    id: 123456789
-    organisationId: 1
+  PHONE:
     verificationRequired: false
-    label: email
+    required: true
+  GENDER:
+  BIRTH_DATE:
+    verified: true
+  ADDRESS:
+    label: default
+  ADDRESS_ALT:
+    label: billing
+# Address labels can be: default, billing, business, home, postal, shipping, other
+personAttributes:
+  BIRTH_DATE:
+    verified: true
+fieldConfiguration:
+  TELEPHONE_NUMBER:
+    !!com.onegini.styling.mocked.model.FieldConfigurationAttribute
+    label:
+  STREET_ADDRESS:
+    !!com.onegini.styling.mocked.model.FieldConfigurationAttribute
+    label:
 passwordPolicy:
   !!com.onegini.styling.mocked.model.PasswordPolicy
   minLength: 6
@@ -37,3 +76,9 @@ passwordPolicy:
   upperCaseCharRequired: true
   specialCharRequired: true
   digitRequired: true
+countryCodes:
+  - NL
+  - BE
+  - DE
+  - FR
+  

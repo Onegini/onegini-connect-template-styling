@@ -1,0 +1,10 @@
+retryStepUp: true
+stepUpMethods:
+  email: email
+  sms: sms
+stepUpAlternatives:
+  pin: pin
+  sms: sms
+  email: email
+  timeBasedOneTimePassword: timeBasedOneTimePassword
+  mobileAuthentication: mobileAuthentication

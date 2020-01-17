@@ -1,7 +1,9 @@
 ### docker-config
 /common/
 # Maven build files
-#target/
+target/
+!target/onegini-template-styling-1.0.0-SNAPSHOT
+
 
 
 # Eclipse/VS Code project files

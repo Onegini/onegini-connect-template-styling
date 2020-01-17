@@ -1,0 +1,6 @@
+sentTo: someone@example.com
+trustedDevide: true
+stepUpMethod:
+  value: email
+  # value: sms
+  # value: external
