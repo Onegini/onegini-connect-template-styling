@@ -10,14 +10,11 @@ showMobile: true
 isMobileNumberConfirmationEnabled: true
 isPinEnabled: true
 isEmailConfirmationEnabled: true
-showExtendedFields: true
+showExtendedFields: false
 signUpUnPForm:
   !!com.onegini.styling.mocked.model.SignUpUnPForm
   firstName:
   lastName:
-  birthDateDay:
-  birthDateMonth:
-  birthDateYear:
   mobileNumber:
   mobileNumberConfirmation:
   pin:
@@ -56,11 +53,15 @@ attributeContract:
   GENDER:
   BIRTH_DATE:
     verified: true
-  ADDRESS:
-    label: default
-  ADDRESS_ALT:
-    label: billing
-# Address labels can be: default, billing, business, home, postal, shipping, other
+  #ADDRESS:
+    #label: default
+  #ADDRESS_ALT:
+    #label: billing
+    #label: business
+    #label: home
+    #label: postal
+    #label: shipping
+    #label: other
 personAttributes:
   BIRTH_DATE:
     verified: true
@@ -84,4 +85,3 @@ countryCodes:
   - BE
   - DE
   - FR
-  
