@@ -1,0 +1,17 @@
+migrationLoginFlow: false
+personName: Aart
+personAttributes: 
+  name:
+  phone:
+mobileRequiredInAttributeContract: true
+cancelTo: /personal/signup/cancel
+verificationRequired: true
+oauthEmailPresent: false
+migrationMessage: hm
+isEmailConfirmationEnabled: true
+emailOnlyForm:
+  !!com.onegini.styling.mocked.model.EmailForm  
+  email: 
+  emailConfirmation:
+
+

@@ -1,0 +1,39 @@
+isPinEnabled: false
+showMobile: false
+organisation:
+  !!com.onegini.styling.mocked.model.Organisation
+  id: 1
+  name: Salarize
+  hasLogo: true
+  hasLogoLandscape: true
+  hasNoLogoLandscape: false
+isEmailConfirmationEnabled: false 
+cancelTo: /personal/signup/cancel
+signUpUnPForm:
+  !!com.onegini.styling.mocked.model.SignUpUnPForm
+  firstName:
+  lastName:
+  dateOfBirth:
+  postalCode:
+  bankNo:
+  email: abc@def.ghi
+  emailConfirmation: false
+  password:
+  confirmPassword:
+  newsletter: true
+  termsOfUse: true
+attributeContract:
+  EMAIL:
+    !!com.onegini.styling.mocked.model.OrganisationAttribute
+    id: 123456789
+    organisationId: 1
+    verificationRequired: false
+    label: email
+passwordPolicy:
+  !!com.onegini.styling.mocked.model.PasswordPolicy
+  minLength: 6
+  maxLength: 100
+  lowerCaseCharRequired: true
+  upperCaseCharRequired: true
+  specialCharRequired: true
+  digitRequired: true

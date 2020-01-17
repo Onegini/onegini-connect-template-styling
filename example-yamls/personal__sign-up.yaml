@@ -1,0 +1,42 @@
+organisation:
+  !!com.onegini.styling.mocked.model.Organisation
+  id: 1
+  name: Salarize
+  hasLogo: true
+  hasLogoLandscape: true
+  hasNoLogoLandscape: false
+migrationLoginFlow: false
+isEmailConfirmationEnabled: true
+isPinEnabled: true
+showMobile: true
+mobileRequiredInAttributeContract: true
+cancelTo: /personal/signup/cancel
+verificationRequired: true
+oauthEmailPresent: true
+migrationMessage:
+signUpForm:
+  !!com.onegini.styling.mocked.model.SignUpForm  
+  lastName: Veerman
+  email:
+  emailConfirmation:
+  password:
+  confirmPassword:
+  birthDateDay: 4
+  birthDateMonth: 8
+  birthDateYear: 2010
+attributeContract:
+  EMAIL:
+    !!com.onegini.styling.mocked.model.OrganisationAttribute
+    id: 123456789
+    organisationId: 1
+    verificationRequired: false
+    label: email
+passwordPolicy:
+  !!com.onegini.styling.mocked.model.PasswordPolicy
+  minLength: 6
+  maxLength: 100
+  lowerCaseCharRequired: true
+  upperCaseCharRequired: true
+  specialCharRequired: true
+  digitRequired: true
+

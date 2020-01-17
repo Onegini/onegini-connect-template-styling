@@ -1,0 +1,7 @@
+formSubmitPath: /
+textErrorCodeRequired: true
+textErrorCodeWrong: Onjuiste code
+textSubmit: Aanmaken
+formObject:
+  !!com.onegini.styling.mocked.model.InvitationSmsForm
+  code:

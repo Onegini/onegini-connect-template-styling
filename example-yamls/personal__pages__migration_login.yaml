@@ -1,0 +1,19 @@
+showLogin: true
+showUnpLogin: true
+showQRLogin: false
+migrationLoginFlow: false
+showEmailOnlyLogin: false
+showInlineSignUp: false
+loginUnrestrictedFormat: true
+showRemindUsername: true
+mobileLoginEnabled: false
+mobileLoginEmail: somebody@example.com
+mobileLoginUsernameLdap: somebody@example.com
+csrfToken: abcdef12345
+optionalMobileLogin: true
+isActionTokenLinkEnabled: false
+loginForm:
+  !!com.onegini.styling.mocked.model.LoginForm  
+  email:
+  password:
+  confirmPassword:

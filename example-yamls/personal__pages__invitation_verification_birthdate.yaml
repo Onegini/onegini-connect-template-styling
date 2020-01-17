@@ -1,0 +1,5 @@
+formObject:
+  !!com.onegini.styling.mocked.model.BirthDateForm
+  birthDateDay: 
+  birthDateMonth: 
+  birthDateYear: 

@@ -1,0 +1,146 @@
+showConnectedDevices: false
+showLinkedIdps: true
+showUnusedIdps: true
+personInfo:
+  !!com.onegini.styling.mocked.model.PersonInfo
+  personId: 123456789
+  displayName: John Doe
+  dateOfBirth: 10-01-2002
+  emailAddress: somebody@example.com
+  emailAttributeId: 76543234567
+  mobileNumber: +3112345678
+  mobileNumberAttributeId: 5434543
+  gender: M
+showUserName: true
+showEmailVerificationNotification: true
+showEmailVerificationLink: true
+showPhoneNumberVerificationNotification: true
+showPhoneNumberVerificationLink: true
+showPasswordSection: true
+showPinSection: true
+showPinValue: true
+pinActivationLinkTarget: x
+pinActivationLinkText: y
+showTwoWayOtpSection: false
+showTwoWayOtpActivationLink: false
+idps:
+  - !!com.onegini.styling.mocked.model.Idp
+    id: 1234567
+    type: facebook
+    enabled: true
+    name: Facebook
+  - !!com.onegini.styling.mocked.model.Idp
+    id: 7654322
+    type: eherkenning
+    enabled: true
+    name: eHerkenning
+  - !!com.onegini.styling.mocked.model.Idp
+    id: 7654322
+    type: paypal
+    enabled: true
+    name: Paypal
+  - !!com.onegini.styling.mocked.model.Idp
+    id: 7654322
+    type: idin
+    enabled: true
+    name: iDIN
+unusedIdps:
+  - !!com.onegini.styling.mocked.model.Idp
+    id: 7654321
+    type: google_oauth2
+    enabled: true
+    name: Google
+  - !!com.onegini.styling.mocked.model.Idp
+    id: 7654321
+    type: itsme
+    enabled: true
+    name: ITSME
+      - !!com.onegini.styling.mocked.model.Idp
+    id: 1234567
+    type: facebook
+    enabled: true
+    name: Facebook
+  - !!com.onegini.styling.mocked.model.Idp
+    id: 7654321
+    type: google_oauth2
+    enabled: true
+    name: Google
+  - !!com.onegini.styling.mocked.model.Idp
+    id: 7654321
+    type: itsme
+    enabled: true
+    name: ITSME
+  - !!com.onegini.styling.mocked.model.Idp
+    id: 7654322
+    type: eidas
+    enabled: true
+    name: eIDAS
+  - !!com.onegini.styling.mocked.model.Idp
+    id: 7654322
+    type: bankid
+    enabled: true
+    name: BankID
+  - !!com.onegini.styling.mocked.model.Idp
+    id: 7654322
+    type: linkedin
+    enabled: true
+    name: LinkedIn
+  - !!com.onegini.styling.mocked.model.Idp
+    id: 7654322
+    type: apple
+    enabled: true
+    name: AppleID
+  - !!com.onegini.styling.mocked.model.Idp
+    id: 7654322
+    type: twitter
+    enabled: true
+    name: Twitter
+  - !!com.onegini.styling.mocked.model.Idp
+    id: 7654322
+    type: digid
+    enabled: true
+    name: DigID
+  - !!com.onegini.styling.mocked.model.Idp
+    id: 7654322
+    type: eherkenning
+    enabled: true
+    name: eHerkenning
+  - !!com.onegini.styling.mocked.model.Idp
+    id: 7654322
+    type: paypal
+    enabled: true
+    name: Paypal
+  - !!com.onegini.styling.mocked.model.Idp
+    id: 7654322
+    type: idin
+    enabled: true
+    name: iDIN
+
+connectedDevices:
+  - !!com.onegini.styling.mocked.model.Device
+    id: 1
+    name: Henk
+    platform: iOS
+    mobileAppInstance: true
+    pushAuthenticationEnabled: false
+    lastLogin: 2019-02-08 03:32:36
+    created: 2018-02-08 03:32:36
+    authorizedOn: 2018-02-08 03:32:36
+  - !!com.onegini.styling.mocked.model.Device
+    id: 2
+    name: Hermanus
+    platform: android
+    mobileAppInstance: true
+    pushAuthenticationEnabled: true
+    lastLogin: 2019-02-08 03:32:36
+    created: 2018-02-08 03:32:36
+    authorizedOn: 2018-02-08 03:32:36
+  - !!com.onegini.styling.mocked.model.Device
+    id: 1
+    name: Freek-Willem
+    platform: iOS
+    mobileAppInstance: true
+    pushAuthenticationEnabled: false
+    lastLogin: 2019-02-08 03:32:36
+    created: 2018-02-08 03:32:36
+    authorizedOn: 2018-02-08 03:32:36
