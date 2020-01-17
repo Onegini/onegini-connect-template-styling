@@ -1,7 +1,8 @@
 ### docker-config
 /common/
 # Maven build files
-target/
+#target/
+
 
 # Eclipse/VS Code project files
 .classpath

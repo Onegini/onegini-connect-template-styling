@@ -18,6 +18,8 @@ package com.onegini.styling.mocked.model;
 
 import lombok.Data;
 
+import java.util.Date;
+
 @Data
 public class Device {
     private String id;
@@ -25,7 +27,7 @@ public class Device {
     private String platform;
     private Boolean mobileAppInstance;
     private Boolean pushAuthenticationEnabled;
-    private String lastLogin;
-    private String created;
-    private String authorizedOn;
+    private Date lastLogin;
+    private Date created;
+    private Date authorizedOn;
 }

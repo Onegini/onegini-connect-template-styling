@@ -24,4 +24,5 @@ public class Idp {
   private String name;
   private String type;
   private boolean enabled;
+  private boolean removable;
 }
