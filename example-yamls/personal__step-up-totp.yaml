@@ -1,3 +1,5 @@
+sentTo: someone@example.com
+trustedDevice: true
 stepUpAlternatives:
   pin: pin
   sms: sms

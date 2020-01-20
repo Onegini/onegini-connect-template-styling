@@ -1,6 +1,5 @@
-stepUpAlternatives:
+stepUpMethods:
   pin: pin
   sms: sms
-  email: email
   timeBasedOneTimePassword: timeBasedOneTimePassword
   mobileAuthentication: mobileAuthentication

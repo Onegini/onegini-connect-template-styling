@@ -1,7 +1,3 @@
-retryStepUp: true
-stepUpMethods:
-  email: email
-  sms: sms
 stepUpAlternatives:
   pin: pin
   sms: sms

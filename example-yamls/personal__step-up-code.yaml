@@ -1,6 +1,13 @@
 sentTo: someone@example.com
 trustedDevide: true
+retryStepUp: true
 stepUpMethod:
   value: email
   # value: sms
   # value: external
+stepUpAlternatives:
+  pin: pin
+  sms: sms
+  email: email
+  timeBasedOneTimePassword: timeBasedOneTimePassword
+  mobileAuthentication: mobileAuthentication
