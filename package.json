@@ -1,0 +1,24 @@
+{
+  "name": "idp-unive-extension",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "node-sass --source-map true ./src/main/styles -o ./target/classes/extension-resources/static/css",
+    "compile-js": "babel ./src/main/resources/extension-resources/static/js --out-dir ./target/classes/extension-resources/static/js",
+    "echo": "echo $static_dest"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.7.7",
+    "@babel/core": "^7.7.7",
+    "@babel/node": "^7.7.7",
+    "@babel/plugin-transform-runtime": "^7.7.6",
+    "node-sass": "^4.13.0"
+  },
+  "dependencies": {
+    "@babel/preset-env": "^7.7.7"
+  }
+}

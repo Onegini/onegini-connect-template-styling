@@ -1,0 +1,18 @@
+{
+  "poep": {
+    "STYLING_EXTENSIONRESOURCESLOCATION": "/Users/erik/repositories/onegini/onegini-war/src/main/resources",
+    "STYLING_CORERESOURCESLOCATION": "/Users/erik/repositories/standalone-styling/target/standalone-styling-1.0-SNAPSHOT.jar",
+    "STYLING_TEMPLATECONFIGLOCATION": "/Users/erik/repositories/standalone-styling/yaml-mocks",
+    "STYLING_DEFAULTLOCALE": "en_GB"
+  },
+  "unive": {
+    "STYLING_EXTENSIONRESOURCESLOCATION": "Users/erik/repositories/idp-unive/idp-unive-extension/src/main/resources/extension-resources",
+    "STYLING_EXTENSIONTARGETLOCATION": "/Users/erik/repositories/idp-unive/idp-unive-extension/target/classes/extension-resources",
+    "STYLING_DEFAULTLOCALE": "nl_NL"
+  },
+  "robeco": {
+    "STYLING_EXTENSIONRESOURCESLOCATION": "/Users/erik/repositories/idp-robeco/idp-robeco-extension/src/main/resources/extension-resources",
+    "STYLING_EXTENSIONTARGETLOCATION": "/Users/erik/repositories/idp-robeco/idp-robeco-extension/target/classes/extension-resources",
+    "STYLING_DEFAULTLOCALE": "nl_NL"
+  }
+}

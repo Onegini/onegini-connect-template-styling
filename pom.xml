@@ -19,13 +19,6 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <parent>
-    <groupId>com.onegini</groupId>
-    <artifactId>og-parent</artifactId>
-    <version>25</version>
-    <relativePath/>
-  </parent>
-
   <groupId>com.onegini.styling</groupId>
   <artifactId>onegini-template-styling</artifactId>
   <version>1.0.0-SNAPSHOT</version>
@@ -187,6 +180,75 @@
   </dependencies>
   <build>
     <plugins>
+      <plugin>
+        <groupId>com.github.eirslett</groupId>
+        <artifactId>frontend-maven-plugin</artifactId>
+        <version>1.8.0</version> 
+        <configuration>
+          <installDirectory>${project.build.outputDirectory}</installDirectory>
+          <environmentVariables>
+            <!-- Simple var -->
+            <styles>${basedir}/src/main/styles</styles>
+            <static_src>${basedir}/src/main/resources/extension-resources</static_src>
+            <static_dest>${project.build.outputDirectory}/extension-resources/static</static_dest>
+          </environmentVariables>
+        </configuration>
+
+        <executions>
+          <execution>
+            <id>install node and npm</id>
+            <goals>
+              <goal>install-node-and-npm</goal>
+            </goals>
+            <configuration>
+              <nodeVersion>v12.14.0</nodeVersion>
+            </configuration>
+          </execution>
+
+          <execution>
+            <id>npm install</id>
+            <goals>
+              <goal>npm</goal>
+            </goals>
+            <!-- Optional configuration which provides for running any npm command -->
+            <configuration>
+              <arguments>install</arguments>
+            </configuration>
+          </execution>
+
+          <!-- <execution>
+            <id>build css</id>
+            <phase>generate-resources</phase>
+            <goals>
+              <goal>npm</goal>
+            </goals>
+            <configuration>
+              <arguments>run build-css</arguments>
+            </configuration>
+          </execution>
+          <execution>
+            <id>build js</id>
+            <phase>generate-resources</phase>
+            <goals>
+              <goal>npm</goal>
+            </goals>
+            <configuration>
+              <arguments>run compile-js</arguments>
+            </configuration>
+          </execution> -->
+          <execution>
+            <id>env vars</id>
+            <phase>generate-resources</phase>
+            <goals>
+              <goal>npm</goal>
+            </goals>
+            <configuration>
+              <arguments>run echo</arguments>
+            </configuration>
+          </execution>
+
+        </executions>
+      </plugin>
 
       <plugin>
         <groupId>org.springframework.boot</groupId>
@@ -209,8 +271,6 @@
         <artifactId>maven-surefire-plugin</artifactId>
         <version>${maven-surefire-plugin.version}</version>
       </plugin>
-
     </plugins>
-
   </build>
 </project>
