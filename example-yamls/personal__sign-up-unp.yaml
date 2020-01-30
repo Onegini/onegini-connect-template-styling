@@ -1,10 +1,6 @@
 organisation:
 isMigratingUser: false
 migrationLoginFlow: false
-displayNameFields: true
-displayMobileNrOrPin: true
-displayGender: false
-displayBirthDay: false
 personName: Henk
 showMobile: true
 isMobileNumberConfirmationEnabled: true
@@ -64,7 +60,6 @@ attributeContract:
     #label: other
 personAttributes:
   BIRTH_DATE:
-    verified: true
 fieldConfiguration:
   TELEPHONE_NUMBER:
     !!com.onegini.styling.mocked.model.FieldConfigurationAttribute

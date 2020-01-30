@@ -1,4 +1,86 @@
 organisation:
+isMigratingUser: true
+migrationLoginFlow: false
+personName: Henk
+showMobile: true
+isMobileNumberConfirmationEnabled: true
+isPinEnabled: true
+isEmailConfirmationEnabled: true
+showExtendedFields: false
+signUpForm:
+  !!com.onegini.styling.mocked.model.SignUpUnPForm
+  firstName:
+  lastName:
+  mobileNumber:
+  mobileNumberConfirmation:
+  pin:
+  confirmPin:
+  gender:
+  email:
+  emailConfirmation:
+  password:
+  confirmPassword:
+  termsOfUse: false
+  address:
+    companyName:
+    attention:
+    streetName:
+    houseNumber: 0
+    houseNumberAddition:
+    postalCode:
+    city:
+    region:
+    country:
+  billingIsShippingAddress: false
+  addressAlt1:
+    companyName:
+    attention:
+    streetName:
+    houseNumber: 0
+    houseNumberAddition:
+    postalCode:
+    city:
+    region:
+    country:
+attributeContract:
+  PHONE:
+    verificationRequired: false
+    required: true
+  GENDER:
+  BIRTH_DATE:
+    verified: true
+  #ADDRESS:
+    #label: default
+  #ADDRESS_ALT:
+    #label: billing
+    #label: business
+    #label: home
+    #label: postal
+    #label: shipping
+    #label: other
+personAttributes:
+  BIRTH_DATE:
+fieldConfiguration:
+  TELEPHONE_NUMBER:
+    !!com.onegini.styling.mocked.model.FieldConfigurationAttribute
+    label:
+  STREET_ADDRESS:
+    !!com.onegini.styling.mocked.model.FieldConfigurationAttribute
+    label:
+passwordPolicy:
+  !!com.onegini.styling.mocked.model.PasswordPolicy
+  minLength: 6
+  maxLength: 100
+  lowerCaseCharRequired: true
+  upperCaseCharRequired: true
+  specialCharRequired: true
+  digitRequired: true
+countryCodes:
+  - NL
+  - BE
+  - DE
+  - FR
+organisation:
   !!com.onegini.styling.mocked.model.Organisation
   id: 1
   name: Salarize

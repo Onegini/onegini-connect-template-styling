@@ -1,6 +1,6 @@
-message: personal.verify.outcome.success.title
+message: personal.verification.mailSent
 messageType:
-  value: error
+  value: success
 personInfo:
   !!com.onegini.styling.mocked.model.PersonInfo
   personId: 123456789
@@ -22,7 +22,9 @@ pinValue: pincode1
 pinActivationLinkTarget: pinActivationLinkTarget
 pinActivationLinkText: pinActivationLinkText
 showTwoWayOtpSection: true
-showTwoWayOtpActivationLink: true
+twoWayOtpStateMessage: Enable
+showTwoWayOtpActivationLink: false
+showTwoWayOtpDeactivationLink: true
 showConnectedDevices: true
 connectedDevices:
   - !!com.onegini.styling.mocked.model.Device
