@@ -43,4 +43,4 @@ gitlab-tools/__pycache__/*
 
 # Gulp
 /gulp/node_modules
-/gulp/config.json
+/gulp/*.config.json
