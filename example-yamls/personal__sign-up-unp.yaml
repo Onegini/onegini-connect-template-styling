@@ -53,11 +53,11 @@ attributeContract:
     label: default
   ADDRESS_ALT:
     label: billing
-    label: business
-    label: home
-    label: postal
-    label: shipping
-    label: other
+    # label: business
+    # label: home
+    # label: postal
+    # label: shipping
+    # label: other
 personAttributes:
   BIRTH_DATE:
 fieldConfiguration:
