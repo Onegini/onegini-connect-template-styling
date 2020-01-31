@@ -49,15 +49,15 @@ attributeContract:
   GENDER:
   BIRTH_DATE:
     verified: true
-  #ADDRESS:
-    #label: default
-  #ADDRESS_ALT:
-    #label: billing
-    #label: business
-    #label: home
-    #label: postal
-    #label: shipping
-    #label: other
+  ADDRESS:
+    label: default
+  ADDRESS_ALT:
+    label: billing
+    label: business
+    label: home
+    label: postal
+    label: shipping
+    label: other
 personAttributes:
   BIRTH_DATE:
 fieldConfiguration:
