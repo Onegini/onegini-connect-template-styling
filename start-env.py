@@ -4,6 +4,8 @@ import os
 import subprocess
 import json
 import argparse
+import time
+import signal
 
 parser = argparse.ArgumentParser(description='Set environment variables for use with springboot, mvn and npm.')
 parser.add_argument('-e', '--environment', help='Set the environment to load. Use the name as set in configutation. When omitted uses configured defaults', required=False)
@@ -30,16 +32,25 @@ def loadVars (data, vars='default'):
     except KeyError:
         print('Cannot find the environment you are looking for in current configuration file.')
 
+def kill_pid (pids):
+    for pid in pids:
+        print(pid)
+        print(type(pid))
+        os.kill(pid, 9)
 
 parsed = loadJson(arguments.config) if arguments.config  else loadJson()
 
 loadVars(parsed)
 if arguments.environment: loadVars(parsed, arguments.environment)
+gulp = subprocess.Popen(["gulp", "watch"])
+mvn = subprocess.Popen(["mvn spring-boot:run"], shell=True)
+pids = [ gulp, mvn ]
+try:
+    mvn.wait()
+except KeyboardInterrupt:
+    for process in pids:
+        print("Terminating %s" % process)
+        process.kill()
 
-# npm1 = subprocess.Popen(["npm i"], shell=True, stdout=subprocess.PIPE)
-# subprocess.Popen(["xterm"], shell=True, stdin=npm1.stdout)
 
-mvn1 = subprocess.Popen(["mvn spring-boot:run"], shell=True, stdin=subprocess.PIPE, stdout=subprocess.PIPE)
-mvn2 = subprocess.Popen(["open -a terminal"], shell=True, stdin=subprocess.PIPE, stdout=subprocess.PIPE)
-mvn1_out = mvn1.communicate()
-mvn2_in = mvn2.communicate(input=mvn1_out[0])
+# signal.getsignal(signal.SIG_DFL), kill_pid(pids))

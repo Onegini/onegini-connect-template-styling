@@ -180,14 +180,13 @@
   </dependencies>
   <build>
     <plugins>
-      <plugin>
+      <!-- <plugin>
         <groupId>com.github.eirslett</groupId>
         <artifactId>frontend-maven-plugin</artifactId>
         <version>1.8.0</version> 
         <configuration>
           <installDirectory>${project.build.outputDirectory}</installDirectory>
           <environmentVariables>
-            <!-- Simple var -->
             <styles>${basedir}/src/main/styles</styles>
             <static_src>${basedir}/src/main/resources/extension-resources</static_src>
             <static_dest>${project.build.outputDirectory}/extension-resources/static</static_dest>
@@ -210,13 +209,12 @@
             <goals>
               <goal>npm</goal>
             </goals>
-            <!-- Optional configuration which provides for running any npm command -->
             <configuration>
               <arguments>install</arguments>
             </configuration>
           </execution>
 
-          <!-- <execution>
+          <execution>
             <id>build css</id>
             <phase>generate-resources</phase>
             <goals>
@@ -235,7 +233,7 @@
             <configuration>
               <arguments>run compile-js</arguments>
             </configuration>
-          </execution> -->
+          </execution>
           <execution>
             <id>env vars</id>
             <phase>generate-resources</phase>
@@ -245,10 +243,10 @@
             <configuration>
               <arguments>run echo</arguments>
             </configuration>
-          </execution>
+          </execution> 
 
         </executions>
-      </plugin>
+      </plugin>-->
 
       <plugin>
         <groupId>org.springframework.boot</groupId>
