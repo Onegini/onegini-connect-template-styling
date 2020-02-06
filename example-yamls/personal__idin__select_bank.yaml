@@ -1,0 +1,29 @@
+#!! THIS DOESNT WORK YET !!
+selectBankForm:
+  !!com.onegini.styling.mocked.model.SelectBankForm
+  selectedIssuerId: 0
+mapping:
+    authenticateUrl: https://iDINauthenticateUrl
+    authenticationCompletedUrl: https://iDINauthenticationCompletedUrl
+idinIssuers:
+  - !!com.onegini.styling.mocked.model.Issuer
+    id: 1
+    name: ABN AMRO
+  - !!com.onegini.styling.mocked.model.Issuer
+    id: 2
+    name: ING
+  - !!com.onegini.styling.mocked.model.Issuer
+    id: 3
+    name: Rabobank
+  - !!com.onegini.styling.mocked.model.Issuer
+    id: 4
+    name: SNS
+  - !!com.onegini.styling.mocked.model.Issuer
+    id: 5
+    name: ASN Bank
+  - !!com.onegini.styling.mocked.model.Issuer
+    id: 6
+    name: RegioBank
+  - !!com.onegini.styling.mocked.model.Issuer
+    id: 7
+    name: Triodos Bank

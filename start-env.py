@@ -42,7 +42,11 @@ parsed = loadJson(arguments.config) if arguments.config  else loadJson()
 
 loadVars(parsed)
 if arguments.environment: loadVars(parsed, arguments.environment)
-gulp = subprocess.Popen(["gulp", "watch"])
+
+# mvn = subprocess.Popen(["mvn clean package"], shell=True)
+# gulp = subprocess.Popen(["gulp", "build"])
+
+gulp = subprocess.Popen(["gulp", "watcher"])
 mvn = subprocess.Popen(["mvn spring-boot:run"], shell=True)
 pids = [ gulp, mvn ]
 try:
@@ -50,7 +54,7 @@ try:
 except KeyboardInterrupt:
     for process in pids:
         print("Terminating %s" % process)
-        process.kill()
+        process.terminate()
 
 
-# signal.getsignal(signal.SIG_DFL), kill_pid(pids))
+# # signal.getsignal(signal.SIG_DFL), kill_pid(pids))

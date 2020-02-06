@@ -1,0 +1,3 @@
+emailOnlyForm:
+  !!com.onegini.styling.mocked.model.EmailForm
+  email:

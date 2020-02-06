@@ -1,0 +1,5 @@
+stepUpMethods:
+  pin: pin
+  sms: sms
+  timeBasedOneTimePassword: timeBasedOneTimePassword
+  mobileAuthentication: mobileAuthentication

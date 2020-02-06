@@ -1,0 +1,87 @@
+showMigrationMessage: true
+migrationMessage: If you already have an account, please use the migration code you received by email.
+message: personal.verification.mailSent
+messageType:
+  value: success
+showLogin: true
+csrfToken: abcdef12345
+loginUnrestrictedFormat: false
+showEmailOnlyLogin: false
+showUnpLogin: true
+reCaptchaSiteKey: false
+showRemindUsername: true
+optionalMobileLogin: true
+showSignUp: true
+migrationLoginFlow: false
+optionalMobileLoginEnabled: true
+mobileLoginEnabled: true
+loginForm:
+  !!com.onegini.styling.mocked.model.LoginForm
+  email:
+  password:
+  confirmPassword:
+emailOnlyForm:
+  !!com.onegini.styling.mocked.model.LoginForm
+  email:
+showIdps: true
+idps:
+  - !!com.onegini.styling.mocked.model.Idp
+    id: 1234567
+    type: facebook
+    enabled: true
+    name: Facebook
+  - !!com.onegini.styling.mocked.model.Idp
+    id: 7654321
+    type: google_oauth2
+    enabled: true
+    name: Google
+  - !!com.onegini.styling.mocked.model.Idp
+    id: 7654321
+    type: itsme
+    enabled: true
+    name: ITSME
+  - !!com.onegini.styling.mocked.model.Idp
+    id: 7654322
+    type: eidas
+    enabled: true
+    name: eIDAS
+  - !!com.onegini.styling.mocked.model.Idp
+    id: 7654322
+    type: bankid
+    enabled: true
+    name: BankID
+  - !!com.onegini.styling.mocked.model.Idp
+    id: 7654322
+    type: linkedin
+    enabled: true
+    name: LinkedIn
+  - !!com.onegini.styling.mocked.model.Idp
+    id: 7654322
+    type: apple
+    enabled: true
+    name: AppleID
+  - !!com.onegini.styling.mocked.model.Idp
+    id: 7654322
+    type: twitter
+    enabled: true
+    name: Twitter
+  - !!com.onegini.styling.mocked.model.Idp
+    id: 7654322
+    type: digid
+    enabled: true
+    name: DigID
+  - !!com.onegini.styling.mocked.model.Idp
+    id: 7654322
+    type: eherkenning
+    enabled: true
+    name: eHerkenning
+  - !!com.onegini.styling.mocked.model.Idp
+    id: 7654322
+    type: paypal
+    enabled: true
+    name: Paypal
+  - !!com.onegini.styling.mocked.model.Idp
+    id: 7654322
+    type: idin
+    enabled: true
+    name: iDIN

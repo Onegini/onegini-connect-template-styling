@@ -35,9 +35,17 @@ const compileJs = () =>  gulp.src(`${process.env.STYLING_EXTENSIONUNCOMPILEDLOCA
 	.pipe(uglify())
 	.pipe(gulp.dest(`${process.env.STYLING_EXTENSIONRESOURCESLOCATION}/static/js`));
 
+const copyMessages = () => gulp.src(`${process.env.STYLING_EXTENSIONUNCOMPILEDLOCATION}/messages/*.properties`)
+.pipe(gulp.dest(`${process.env.STYLING_EXTENSIONRESOURCESLOCATION}/messages`));
+
+const copyAssets = () => gulp.src([`${process.env.STYLING_EXTENSIONUNCOMPILEDLOCATION}/static/**/*.*`, `!${process.env.STYLING_EXTENSIONUNCOMPILEDLOCATION}/static/JS/**/*.js`])
+.pipe(gulp.dest(`${process.env.STYLING_EXTENSIONRESOURCESLOCATION}/static`));
+
 const watchSass = () =>  watch(`${process.env.STYLING_EXTENSIONUNCOMPILEDLOCATION}/scss/**/*.scss`, gulp.series([compileSass]));	
 const watchJs = () =>  watch(`${process.env.STYLING_EXTENSIONUNCOMPILEDLOCATION}/static/js/**/*.js`, gulp.series([compileJs]));
-const watchHtml = () => watch(`${process.env.STYLING_EXTENSIONUNCOMPILEDLOCATION}/templates`, gulp.series([copyHtml, bs.reload]));
+const watchHtml = () => watch(`${process.env.STYLING_EXTENSIONUNCOMPILEDLOCATION}/templates/**/*.html`, gulp.series([copyHtml, bs.reload]));
+const watchAssets = () => watch([`${process.env.STYLING_EXTENSIONUNCOMPILEDLOCATION}/static/**/*.*`, `!${process.env.STYLING_EXTENSIONUNCOMPILEDLOCATION}/static/JS/**/*.js`], gulp.series([copyAssets]));
+const watchMessages = () => watch(`${process.env.STYLING_EXTENSIONUNCOMPILEDLOCATION}/messages/*.properties`, gulp.series([copyMessages]));
 
 const serve = () => bs.init({
 	// proxy: `http://127.0.0.1:${config.proxyPort}/`,
@@ -45,8 +53,8 @@ const serve = () => bs.init({
 	// files: `${STYLING_EXTENSIONRESOURCESLOCATION}.`,
 });
 
-const build = gulp.parallel(compileSass, compileJs, copyHtml);
-const watch = gulp.parallel(watchSass, watchJs, watchHtml, serve);
+const build = gulp.parallel(compileSass, compileJs, copyHtml, copyAssets, copyMessages);
+const watcher = gulp.parallel(watchSass, watchJs, watchHtml, serve, watchAssets, watchMessages);
 exports.build = build;
-exports.watch = watch;
+exports.watcher = watcher;
 exports.default = gulp.series(build, watch);

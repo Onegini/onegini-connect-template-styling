@@ -26,7 +26,7 @@ public class PasswordResetForm {
     MOBILE
   }
 
-  private PasswordResetType passwordResetType;
+  private PasswordResetType resetType;
   private String email;
 
 }
