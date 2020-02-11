@@ -24,6 +24,6 @@
     "STYLING_EXTENSIONUNCOMPILEDLOCATION": "/Users/erik/repositories/zlm-cim/zlm-cim-extension/src/main/resources/extension-resources",
     "STYLING_TEMPLATECONFIGLOCATION": "../onegini-yaml/zlm",
     "STYLING_DEFAULTLOCALE": "nl_NL",
-    "SERVER_PORT": "9889"
+    "SERVER_PORT": "9988"
   }
 }

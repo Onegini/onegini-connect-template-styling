@@ -180,16 +180,15 @@
   </dependencies>
   <build>
     <plugins>
-      <!-- <plugin>
+      <plugin>
         <groupId>com.github.eirslett</groupId>
         <artifactId>frontend-maven-plugin</artifactId>
         <version>1.8.0</version> 
         <configuration>
           <installDirectory>${project.build.outputDirectory}</installDirectory>
           <environmentVariables>
-            <styles>${basedir}/src/main/styles</styles>
-            <static_src>${basedir}/src/main/resources/extension-resources</static_src>
-            <static_dest>${project.build.outputDirectory}/extension-resources/static</static_dest>
+            <STYLING_EXTENSIONUNCOMPILEDLOCATION>${basedir}/src/main/resources/extension-resources</STYLING_EXTENSIONUNCOMPILEDLOCATION>
+            <STYLING_EXTENSIONRESOURCESLOCATION>${project.build.outputDirectory}/extension-resources</STYLING_EXTENSIONRESOURCESLOCATION>
           </environmentVariables>
         </configuration>
 
@@ -215,38 +214,16 @@
           </execution>
 
           <execution>
-            <id>build css</id>
-            <phase>generate-resources</phase>
+            <id>gulp</id>
             <goals>
-              <goal>npm</goal>
+              <goal>gulp</goal>
             </goals>
             <configuration>
-              <arguments>run build-css</arguments>
+              <arguments>build</arguments>
             </configuration>
           </execution>
-          <execution>
-            <id>build js</id>
-            <phase>generate-resources</phase>
-            <goals>
-              <goal>npm</goal>
-            </goals>
-            <configuration>
-              <arguments>run compile-js</arguments>
-            </configuration>
-          </execution>
-          <execution>
-            <id>env vars</id>
-            <phase>generate-resources</phase>
-            <goals>
-              <goal>npm</goal>
-            </goals>
-            <configuration>
-              <arguments>run echo</arguments>
-            </configuration>
-          </execution> 
-
         </executions>
-      </plugin>-->
+      </plugin>
 
       <plugin>
         <groupId>org.springframework.boot</groupId>

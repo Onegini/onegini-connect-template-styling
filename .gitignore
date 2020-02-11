@@ -42,13 +42,7 @@ gitlab-tools/itest_farm.out
 gitlab-tools/__pycache__/*
 
 # Gulp
-/gulp/node_modules
-<<<<<<< HEAD
-/gulp/config.json
-
 config.json
 
 node_modules
-=======
-/gulp/*.config.json
->>>>>>> 4a8a1d66c1e5b3cbd9dd360c87b8d48041eec231
+
