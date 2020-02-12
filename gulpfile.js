@@ -43,7 +43,7 @@ gulp.src(`${process.env.STYLING_EXTENSIONUNCOMPILEDLOCATION}/static/js/**/*.js`)
 const copyMessages = () => gulp.src(`${process.env.STYLING_EXTENSIONUNCOMPILEDLOCATION}/messages/*.properties`)
 .pipe(gulp.dest(`${process.env.STYLING_EXTENSIONRESOURCESLOCATION}/messages`));
 
-const copyAssets = () => gulp.src([`${process.env.STYLING_EXTENSIONUNCOMPILEDLOCATION}/static/**/*.*`, `!${process.env.STYLING_EXTENSIONUNCOMPILEDLOCATION}/static/JS/**/*.js`])
+const copyAssets = () => gulp.src([`${process.env.STYLING_EXTENSIONUNCOMPILEDLOCATION}/static/**/*.*`, `!${process.env.STYLING_EXTENSIONUNCOMPILEDLOCATION}\\static\\js\\**\\*.js`])
 .pipe(gulp.dest(`${process.env.STYLING_EXTENSIONRESOURCESLOCATION}/static`));
 
 const watchSass = () =>  watch(`${process.env.STYLING_EXTENSIONUNCOMPILEDLOCATION}/scss/**/*.scss`, gulp.series(compileSass, bs.reload));	

@@ -53,6 +53,7 @@ attributeContract:
     label: default
   ADDRESS_ALT:
     label: billing
+    # Possible values:
     # label: business
     # label: home
     # label: postal
@@ -121,4 +122,3 @@ passwordPolicy:
   upperCaseCharRequired: true
   specialCharRequired: true
   digitRequired: true
-

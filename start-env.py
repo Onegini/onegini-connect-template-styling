@@ -37,7 +37,7 @@ def openProcesses(build):
     if build:
         processes.update({'build': subprocess.Popen("mvn clean package", shell=True)})
     else:
-        processes.update({'mvn': subprocess.Popen("mvn spring-boot:run", shell=True)}) 
+        processes.update({'mvn': subprocess.Popen("mvn spring-boot:run", shell=True)})
         processes.update({'gulp': subprocess.Popen("gulp watcher", shell=True)})
     print(processes)
     return processes

@@ -16,5 +16,5 @@ qrCodeLoginData:
     transactionId: 1234567890
     timeout: 60000
     otp: eyJ0cmFuc2FjdGlvbl9pZCI6Ijc3NGI5NDlhLTA5MTItNDIxNy1hNDRiLWE4MTE5M2FkMWVlMiIsIm90cCI6InJZNjB6elBXaE94MkhBY3hBejAvSlE9PSJ9
-  initiatedAt: 1567798686000 
+  initiatedAt: 1567798686000
   now: 1567798686000

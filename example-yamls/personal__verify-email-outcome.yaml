@@ -1,5 +1,6 @@
 messages:
   - success
+  # Possible values:
   # - failed
   # - expired
   # - other
