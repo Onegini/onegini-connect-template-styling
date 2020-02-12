@@ -27,4 +27,3 @@ passwordPolicy:
   upperCaseCharRequired: true
   specialCharRequired: true
   digitRequired: true
-

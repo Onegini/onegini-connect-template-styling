@@ -3,6 +3,7 @@ trustedDevide: true
 retryStepUp: true
 stepUpMethod:
   value: email
+  # Possible values:
   # value: sms
   # value: external
 stepUpAlternatives:
