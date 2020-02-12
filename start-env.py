@@ -35,10 +35,10 @@ def loadVars (data, vars='default'):
 def openProcesses(build):
     processes = {}
     if build:
-        processes.update({'build': subprocess.Popen(["mvn clean package"], shell=True)})
+        processes.update({'build': subprocess.Popen("mvn clean package", shell=True)})
     else:
-        processes.update({'mvn': subprocess.Popen(["mvn spring-boot:run"], shell=True)}) 
-        processes.update({'gulp': subprocess.Popen(["gulp", "watcher"])})
+        processes.update({'mvn': subprocess.Popen("mvn spring-boot:run", shell=True)}) 
+        processes.update({'gulp': subprocess.Popen("gulp watcher", shell=True)})
     print(processes)
     return processes
 
