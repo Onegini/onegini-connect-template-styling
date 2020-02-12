@@ -18,11 +18,16 @@ package com.onegini.styling.mocked.model;
 
 import lombok.Data;
 
+import java.util.Date;
+
 @Data
-public class Idp {
-  private String id;
-  private String name;
-  private String type;
-  private boolean enabled;
-  private boolean removable;
+public class Device {
+    private String id;
+    private String name;
+    private String platform;
+    private boolean mobileAppInstance;
+    private boolean pushAuthenticationEnabled;
+    private Date lastLogin;
+    private Date created;
+    private Date authorizedOn;
 }

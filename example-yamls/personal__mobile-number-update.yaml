@@ -1,0 +1,10 @@
+mobileNumberOnlyForm:
+  !!com.onegini.styling.mocked.model.MobileNumberUpdateForm
+  mobileNumber: 1234567890
+  mobileNumberConfirmation:
+isMobileNumberMandatory: true
+isMobileNumberConfirmationEnabled: true
+personAttributes:
+  NAME:
+  PHONE__MOBILE:
+

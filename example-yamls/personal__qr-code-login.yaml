@@ -1,0 +1,20 @@
+qrLoginConfiguration:
+  !!com.onegini.styling.mocked.model.QRLoginConfiguration  
+  enabled: true
+  authenticationLevel: 1
+  name: QR Login
+  mobileAuthenticationType: otp
+  googleAppStoreUrl: https://google.com
+  iosAppStoreUrl: https://apple.com
+  deepLinkingEnabled: true
+  deepLinkingRedirectUrl: myapp://qrlogin
+qrCodeLoginData:
+  !!com.onegini.styling.mocked.model.QRCodeLoginData
+  initOtpAuthenticationResponse:
+    !!com.onegini.styling.mocked.model.InitOtpAuthenticationResponse
+    status: SUCCESS
+    transactionId: 1234567890
+    timeout: 60000
+    otp: eyJ0cmFuc2FjdGlvbl9pZCI6Ijc3NGI5NDlhLTA5MTItNDIxNy1hNDRiLWE4MTE5M2FkMWVlMiIsIm90cCI6InJZNjB6elBXaE94MkhBY3hBejAvSlE9PSJ9
+  initiatedAt: 1567798686000 
+  now: 1567798686000

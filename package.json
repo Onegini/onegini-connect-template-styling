@@ -1,24 +1,22 @@
 {
-  "name": "idp-unive-extension",
+  "name": "standalone-styling",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "main": "gulpfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build-css": "node-sass --source-map true ./src/main/styles -o ./target/classes/extension-resources/static/css",
-    "compile-js": "babel ./src/main/resources/extension-resources/static/js --out-dir ./target/classes/extension-resources/static/js",
-    "echo": "echo $static_dest"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Onegini",
+  "license": "Apache2.0",
+  "description": "Used to easily compile SCSS and Javascript with Browsersync",
   "devDependencies": {
-    "@babel/cli": "^7.7.7",
-    "@babel/core": "^7.7.7",
-    "@babel/node": "^7.7.7",
-    "@babel/plugin-transform-runtime": "^7.7.6",
-    "node-sass": "^4.13.0"
-  },
-  "dependencies": {
-    "@babel/preset-env": "^7.7.7"
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-uglify": "^3.0.2",
+    "gulp-watch": "^5.0.1"
   }
 }

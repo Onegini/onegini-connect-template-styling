@@ -1,0 +1,10 @@
+organisation:
+  id: 1
+  name: Onegini
+  hasLogo: true
+unverifiedRequiredAttributes:
+  GENDER: GENDER
+  NAME: NAME
+  EMAIL: EMAIL
+  PHONE: PHONE
+  BIRTH_DATE: BIRTH_DATE

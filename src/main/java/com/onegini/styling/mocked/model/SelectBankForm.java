@@ -19,10 +19,6 @@ package com.onegini.styling.mocked.model;
 import lombok.Data;
 
 @Data
-public class Idp {
-  private String id;
-  private String name;
-  private String type;
-  private boolean enabled;
-  private boolean removable;
+public class SelectBankForm {
+    private String selectedIssuerId;
 }
