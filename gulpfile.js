@@ -30,12 +30,7 @@ const compileSass = () => gulp.src(`${process.env.STYLING_EXTENSIONUNCOMPILEDLOC
 const copyHtml = () => gulp.src(`${process.env.STYLING_EXTENSIONUNCOMPILEDLOCATION}/templates/**/*.html`)
     .pipe(gulp.dest(`${process.env.STYLING_EXTENSIONRESOURCESLOCATION}/templates`));
 
-const compileJs = () => 
-
-
-
-
-gulp.src(`${process.env.STYLING_EXTENSIONUNCOMPILEDLOCATION}/static/js/**/*.js`)
+const compileJs = () => gulp.src(`${process.env.STYLING_EXTENSIONUNCOMPILEDLOCATION}/static/js/**/*.js`)
     .pipe(babel({presets: ['@babel/preset-env']}))
     .pipe(uglify())
     .pipe(gulp.dest(`${process.env.STYLING_EXTENSIONRESOURCESLOCATION}/static/js`));
@@ -54,8 +49,6 @@ const watchMessages = () => watch(`${process.env.STYLING_EXTENSIONUNCOMPILEDLOCA
 
 const serve = () => bs.init({
     proxy: `http://localhost:${process.env.SERVER_PORT}/`
-    // port: config.port,
-    // files: `${STYLING_EXTENSIONRESOURCESLOCATION}.`,
 });
 
 const build = gulp.parallel(compileSass, compileJs, copyHtml, copyAssets, copyMessages);
