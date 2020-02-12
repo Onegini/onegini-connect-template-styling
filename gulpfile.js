@@ -44,8 +44,8 @@ const copyAssets = () => gulp.src([`${process.env.STYLING_EXTENSIONUNCOMPILEDLOC
 const watchSass = () =>  watch(`${process.env.STYLING_EXTENSIONUNCOMPILEDLOCATION}/scss/**/*.scss`, gulp.series(compileSass, bs.reload));	
 const watchJs = () =>  watch(`${process.env.STYLING_EXTENSIONUNCOMPILEDLOCATION}/static/js/**/*.js`, gulp.series(compileJs, bs.reload));
 const watchHtml = () => watch(`${process.env.STYLING_EXTENSIONUNCOMPILEDLOCATION}/templates/**/*.html`, gulp.series(copyHtml, bs.reload));
-const watchAssets = () => watch([`${process.env.STYLING_EXTENSIONUNCOMPILEDLOCATION}/static/**/*.*`, `!${process.env.STYLING_EXTENSIONUNCOMPILEDLOCATION}/static/JS/**/*.js`], gulp.series([copyAssets, bs.reload]));
-const watchMessages = () => watch(`${process.env.STYLING_EXTENSIONUNCOMPILEDLOCATION}/messages/*.properties`, gulp.series([copyMessages, bs.reload]));
+const watchAssets = () => watch([`${process.env.STYLING_EXTENSIONUNCOMPILEDLOCATION}/static/**/*.*`, `!${process.env.STYLING_EXTENSIONUNCOMPILEDLOCATION}/static/JS/**/*.js`], gulp.series(copyAssets, bs.reload));
+const watchMessages = () => watch(`${process.env.STYLING_EXTENSIONUNCOMPILEDLOCATION}/messages/*.properties`, gulp.series(copyMessages, bs.reload));
 
 const serve = () => bs.init({
     proxy: `http://localhost:${process.env.SERVER_PORT}/`
