@@ -1,6 +1,7 @@
 retryStepUp: true
 stepUpMethod:
   value: sms
+  # Possible values:
   # value: pin
   # value: email
 stepUpAlternatives:
