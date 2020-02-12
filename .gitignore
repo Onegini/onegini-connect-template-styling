@@ -43,6 +43,7 @@ gitlab-tools/__pycache__/*
 
 # Gulp
 config.json
+custom-yamls/
 
 node_modules
 

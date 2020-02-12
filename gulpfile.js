@@ -22,33 +22,33 @@ const babel = require('gulp-babel');
 const uglify = require('gulp-uglify');
 const cleanCSS = require('gulp-clean-css');
 
-const compileSass = () => gulp.src(`${process.env.STYLING_EXTENSIONUNCOMPILEDLOCATION}/scss/**/*.scss`)
+const compileSass = () => gulp.src(`${process.env.STYLING_EXTENSIONUNCOMPILEDLOCATION}\\scss\\**\\*.scss`)
 	.pipe(sass().on('error', sass.logError))
 	.pipe(cleanCSS())
-	.pipe(gulp.dest(`${process.env.STYLING_EXTENSIONRESOURCESLOCATION}/static/css`));
+	.pipe(gulp.dest(`${process.env.STYLING_EXTENSIONRESOURCESLOCATION}\\static\\css`));
 
-const copyHtml = () => gulp.src(`${process.env.STYLING_EXTENSIONUNCOMPILEDLOCATION}/templates/**/*.html`)
-	.pipe(gulp.dest(`${process.env.STYLING_EXTENSIONRESOURCESLOCATION}/templates`));
+const copyHtml = () => gulp.src(`${process.env.STYLING_EXTENSIONUNCOMPILEDLOCATION}\\templates\\**\\*.html`)
+	.pipe(gulp.dest(`${process.env.STYLING_EXTENSIONRESOURCESLOCATION}\\templates`));
 
-const compileJs = () =>  gulp.src(`${process.env.STYLING_EXTENSIONUNCOMPILEDLOCATION}/static/js/**/*.js`)
+const compileJs = () =>  gulp.src(`${process.env.STYLING_EXTENSIONUNCOMPILEDLOCATION}\\static\\js\\**\\*.js`)
 	.pipe(babel({presets: ['@babel/preset-env']}))
 	.pipe(uglify())
-	.pipe(gulp.dest(`${process.env.STYLING_EXTENSIONRESOURCESLOCATION}/static/js`));
+	.pipe(gulp.dest(`${process.env.STYLING_EXTENSIONRESOURCESLOCATION}\\static\\js`));
 
-const copyMessages = () => gulp.src(`${process.env.STYLING_EXTENSIONUNCOMPILEDLOCATION}/messages/*.properties`)
-.pipe(gulp.dest(`${process.env.STYLING_EXTENSIONRESOURCESLOCATION}/messages`));
+const copyMessages = () => gulp.src(`${process.env.STYLING_EXTENSIONUNCOMPILEDLOCATION}\\messages\\*.properties`)
+.pipe(gulp.dest(`${process.env.STYLING_EXTENSIONRESOURCESLOCATION}\\messages`));
 
-const copyAssets = () => gulp.src([`${process.env.STYLING_EXTENSIONUNCOMPILEDLOCATION}/static/**/*.*`, `!${process.env.STYLING_EXTENSIONUNCOMPILEDLOCATION}/static/JS/**/*.js`])
-.pipe(gulp.dest(`${process.env.STYLING_EXTENSIONRESOURCESLOCATION}/static`));
+const copyAssets = () => gulp.src([`${process.env.STYLING_EXTENSIONUNCOMPILEDLOCATION}\\static\\**\\*.*`, `!${process.env.STYLING_EXTENSIONUNCOMPILEDLOCATION}\\static\\js\\**\\*.js`])
+.pipe(gulp.dest(`${process.env.STYLING_EXTENSIONRESOURCESLOCATION}\\static`));
 
-const watchSass = () =>  watch(`${process.env.STYLING_EXTENSIONUNCOMPILEDLOCATION}/scss/**/*.scss`, gulp.series([compileSass]));	
-const watchJs = () =>  watch(`${process.env.STYLING_EXTENSIONUNCOMPILEDLOCATION}/static/js/**/*.js`, gulp.series([compileJs]));
-const watchHtml = () => watch(`${process.env.STYLING_EXTENSIONUNCOMPILEDLOCATION}/templates/**/*.html`, gulp.series([copyHtml, bs.reload]));
-const watchAssets = () => watch([`${process.env.STYLING_EXTENSIONUNCOMPILEDLOCATION}/static/**/*.*`, `!${process.env.STYLING_EXTENSIONUNCOMPILEDLOCATION}/static/JS/**/*.js`], gulp.series([copyAssets]));
-const watchMessages = () => watch(`${process.env.STYLING_EXTENSIONUNCOMPILEDLOCATION}/messages/*.properties`, gulp.series([copyMessages]));
+const watchSass = () =>  watch(`${process.env.STYLING_EXTENSIONUNCOMPILEDLOCATION}\\scss\\**\\*.scss`, gulp.series([compileSass]));	
+const watchJs = () =>  watch(`${process.env.STYLING_EXTENSIONUNCOMPILEDLOCATION}\\static\\js\\**\\*.js`, gulp.series([compileJs]));
+const watchHtml = () => watch(`${process.env.STYLING_EXTENSIONUNCOMPILEDLOCATION}\\templates\\**\\*.html`, gulp.series([copyHtml, bs.reload]));
+const watchAssets = () => watch([`${process.env.STYLING_EXTENSIONUNCOMPILEDLOCATION}\\static\\**\\*.*`, `!${process.env.STYLING_EXTENSIONUNCOMPILEDLOCATION}\\static\\js\\**\\*.js`], gulp.series([copyAssets]));
+const watchMessages = () => watch(`${process.env.STYLING_EXTENSIONUNCOMPILEDLOCATION}\\messages\\*.properties`, gulp.series([copyMessages]));
 
 const serve = () => bs.init({
-	// proxy: `http://127.0.0.1:${config.proxyPort}/`,
+	// proxy: `http//127.0.0.1:${config.proxyPort}/`,
 	// port: config.port,
 	// files: `${STYLING_EXTENSIONRESOURCESLOCATION}.`,
 });
