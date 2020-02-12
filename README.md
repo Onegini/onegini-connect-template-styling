@@ -149,27 +149,33 @@ The `standalone-styling` will be available under the Spring Boot Dashboard.
 
 ## Advanced configuration
 
-### Gulp
+For front-end development the springboot server can be run together with the Gulp taskrunner to see changes immediately.
+A python script has been created to load the configuration and start the project. It can also build a new JAR file.
 
-This project contains a sample Gulp configuration to compile SCSS to CSS and bundle JavaScript files. To use Gulp for SCSS and JS (Babel) compilation:
+### Prerequisites
 
-1. Navigate to the `gulp` directory
-2. Run `npm i`
-2. Copy the `example.config.json` file and rename it to `config.json`
-3. Change the configuration to your own needs
-    - The variables in `src` being the path to the source of the files to compile
-    - The variables in `target` being the path to the files where to be compiled to
-    - `htmlLocation` being the path to the html files to watch for Browsersync
-4. Run `gulp`
+- Python >= 3.6
+- Node >= 12
 
-### Run with bash script
-The bash script starts both the Gulp task and the standalone styling tool.
+On first use, run `npm i` to install node dependencies.
 
-1. If you use Windows, use [git bash](https://gitforwindows.org/) to run the script.
-2. Create a config file with the correct locations of your files (see example.cfg)
-3. Start script by running:
-  ```
-  bash start-standalone-styling.sh <config file>
-  ```
-  Replace \<config file\> with the config file you have made for the project you want to open
-4. Stop the script with `ctrl-c`
+### Creating a config file
+
+As a default, the script looks for a `config.json` file in the root of this project.
+The configuration file can be used for different projects. 
+
+See `config_example.json` for an example on how to setup the config file.
+A value not specified in a project uses the value from `default`.
+
+### Using the script
+
+To run a project, the script can be started by running `python3 start-env.py`
+The script accepts the following arguments:
+-h: show help for script
+-e <argument>, --environment <argument>: specify the environment (project) to load from config file. When omitted it will use `default`
+-c <file location>, --configuration <file location>: specify alternative config file to load. When omitted it will use `config.json`
+-b, --build: Build a new JAR file 
+
+To build a project onegini (specified in config.json) we run `python3 start-env.py -e onegini`
+
+Close the script using `crtl + c`

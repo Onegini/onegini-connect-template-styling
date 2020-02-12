@@ -2,9 +2,6 @@
 /common/
 # Maven build files
 target/
-!target/onegini-template-styling-1.0.0-SNAPSHOT
-
-
 
 # Eclipse/VS Code project files
 .classpath
@@ -47,3 +44,9 @@ custom-yamls/
 
 node_modules
 
+<<<<<<< HEAD
+config.yaml
+
+node_modules
+=======
+>>>>>>> 347ada181e204068f04d6a62cac01c252d03376f

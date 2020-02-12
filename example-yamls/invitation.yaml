@@ -1,7 +1,7 @@
 organisation:
   !!com.onegini.styling.mocked.model.Organisation
   id: 1
-  name: Salarize
+  name: Onegini
   hasLogo: true
   hasLogoLandscape: true
   hasNoLogoLandscape: false

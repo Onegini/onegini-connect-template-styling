@@ -7,7 +7,7 @@ personInfo:
   displayName: John Doe
   emailAddress: somebody@example.com
   emailAttributeId: 76543234567
-  mobileNumber: +3112345678
+  mobileNumber: +31623456789
   mobileNumberAttributeId: 5434543
   gender: M
 showUserName: true
@@ -18,7 +18,7 @@ showPhoneNumberVerificationLink: true
 showPasswordSection: true
 showPinSection: true
 showPinValue: true
-pinValue: pincode1
+pinValue: 12345
 pinActivationLinkTarget: pinActivationLinkTarget
 pinActivationLinkText: pinActivationLinkText
 showTwoWayOtpSection: true
