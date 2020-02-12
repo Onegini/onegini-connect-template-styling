@@ -23,17 +23,22 @@ const uglify = require('gulp-uglify');
 const cleanCSS = require('gulp-clean-css');
 
 const compileSass = () => gulp.src(`${process.env.STYLING_EXTENSIONUNCOMPILEDLOCATION}/scss/**/*.scss`)
-	.pipe(sass().on('error', sass.logError))
-	.pipe(cleanCSS())
-	.pipe(gulp.dest(`${process.env.STYLING_EXTENSIONRESOURCESLOCATION}/static/css`));
+    .pipe(sass().on('error', sass.logError))
+    .pipe(cleanCSS())
+    .pipe(gulp.dest(`${process.env.STYLING_EXTENSIONRESOURCESLOCATION}/static/css`));
 
 const copyHtml = () => gulp.src(`${process.env.STYLING_EXTENSIONUNCOMPILEDLOCATION}/templates/**/*.html`)
-	.pipe(gulp.dest(`${process.env.STYLING_EXTENSIONRESOURCESLOCATION}/templates`));
+    .pipe(gulp.dest(`${process.env.STYLING_EXTENSIONRESOURCESLOCATION}/templates`));
 
-const compileJs = () =>  gulp.src(`${process.env.STYLING_EXTENSIONUNCOMPILEDLOCATION}/static/js/**/*.js`)
-	.pipe(babel({presets: ['@babel/preset-env']}))
-	.pipe(uglify())
-	.pipe(gulp.dest(`${process.env.STYLING_EXTENSIONRESOURCESLOCATION}/static/js`));
+const compileJs = () => 
+
+
+
+
+gulp.src(`${process.env.STYLING_EXTENSIONUNCOMPILEDLOCATION}/static/js/**/*.js`)
+    .pipe(babel({presets: ['@babel/preset-env']}))
+    .pipe(uglify())
+    .pipe(gulp.dest(`${process.env.STYLING_EXTENSIONRESOURCESLOCATION}/static/js`));
 
 const copyMessages = () => gulp.src(`${process.env.STYLING_EXTENSIONUNCOMPILEDLOCATION}/messages/*.properties`)
 .pipe(gulp.dest(`${process.env.STYLING_EXTENSIONRESOURCESLOCATION}/messages`));
@@ -41,20 +46,20 @@ const copyMessages = () => gulp.src(`${process.env.STYLING_EXTENSIONUNCOMPILEDLO
 const copyAssets = () => gulp.src([`${process.env.STYLING_EXTENSIONUNCOMPILEDLOCATION}/static/**/*.*`, `!${process.env.STYLING_EXTENSIONUNCOMPILEDLOCATION}/static/JS/**/*.js`])
 .pipe(gulp.dest(`${process.env.STYLING_EXTENSIONRESOURCESLOCATION}/static`));
 
-const watchSass = () =>  watch(`${process.env.STYLING_EXTENSIONUNCOMPILEDLOCATION}/scss/**/*.scss`, gulp.series([compileSass]));	
-const watchJs = () =>  watch(`${process.env.STYLING_EXTENSIONUNCOMPILEDLOCATION}/static/js/**/*.js`, gulp.series([compileJs]));
-const watchHtml = () => watch(`${process.env.STYLING_EXTENSIONUNCOMPILEDLOCATION}/templates/**/*.html`, gulp.series([copyHtml, bs.reload]));
-const watchAssets = () => watch([`${process.env.STYLING_EXTENSIONUNCOMPILEDLOCATION}/static/**/*.*`, `!${process.env.STYLING_EXTENSIONUNCOMPILEDLOCATION}/static/JS/**/*.js`], gulp.series([copyAssets]));
-const watchMessages = () => watch(`${process.env.STYLING_EXTENSIONUNCOMPILEDLOCATION}/messages/*.properties`, gulp.series([copyMessages]));
+const watchSass = () =>  watch(`${process.env.STYLING_EXTENSIONUNCOMPILEDLOCATION}/scss/**/*.scss`, gulp.series(compileSass, bs.reload));	
+const watchJs = () =>  watch(`${process.env.STYLING_EXTENSIONUNCOMPILEDLOCATION}/static/js/**/*.js`, gulp.series(compileJs, bs.reload));
+const watchHtml = () => watch(`${process.env.STYLING_EXTENSIONUNCOMPILEDLOCATION}/templates/**/*.html`, gulp.series(copyHtml, bs.reload));
+const watchAssets = () => watch([`${process.env.STYLING_EXTENSIONUNCOMPILEDLOCATION}/static/**/*.*`, `!${process.env.STYLING_EXTENSIONUNCOMPILEDLOCATION}/static/JS/**/*.js`], gulp.series([copyAssets, bs.reload]));
+const watchMessages = () => watch(`${process.env.STYLING_EXTENSIONUNCOMPILEDLOCATION}/messages/*.properties`, gulp.series([copyMessages, bs.reload]));
 
 const serve = () => bs.init({
-	// proxy: `http://127.0.0.1:${config.proxyPort}/`,
-	// port: config.port,
-	// files: `${STYLING_EXTENSIONRESOURCESLOCATION}.`,
+    proxy: `http://localhost:${process.env.SERVER_PORT}/`
+    // port: config.port,
+    // files: `${STYLING_EXTENSIONRESOURCESLOCATION}.`,
 });
 
 const build = gulp.parallel(compileSass, compileJs, copyHtml, copyAssets, copyMessages);
-const watcher = gulp.parallel(watchSass, watchJs, watchHtml, serve, watchAssets, watchMessages);
+const watcher = gulp.parallel(serve, watchSass, watchJs, watchHtml, watchAssets, watchMessages);
 exports.build = build;
 exports.watcher = watcher;
 exports.default = gulp.series(build, watch);
