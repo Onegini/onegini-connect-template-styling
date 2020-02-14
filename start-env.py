@@ -13,6 +13,7 @@ parser.add_argument('-c', '--config', help='Set the configuration file to load. 
 parser.add_argument('-b', '--build', help='Build new JAR for project', action='store_true', required=False)
 arguments = parser.parse_args()
 
+
 def loadJson( configuration ='./config.json'):
     try:
         with open(configuration) as json_file:
@@ -24,6 +25,7 @@ def loadJson( configuration ='./config.json'):
             print('File %s was not found. Using default instead' % configuration)
             return loadJson()
 
+
 def loadVars (data, vars='default'):
     try:
         entries = data[vars]
@@ -31,6 +33,7 @@ def loadVars (data, vars='default'):
             os.environ[entry] = entries[entry]
     except KeyError:
         print('Cannot find the environment you are looking for in current configuration file.')
+
 
 def openProcesses(build):
     processes = {}
@@ -41,6 +44,7 @@ def openProcesses(build):
         processes.update({'gulp': subprocess.Popen("gulp watcher", shell=True)})
     print(processes)
     return processes
+
 
 print(arguments)
 parsed = loadJson(arguments.config) if arguments.config  else loadJson()
