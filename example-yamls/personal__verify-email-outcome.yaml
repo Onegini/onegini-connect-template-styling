@@ -1,6 +1,6 @@
 messages:
-  - success
   # Possible values:
+  - success
   # - failed
   # - expired
   # - other

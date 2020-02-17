@@ -2,8 +2,8 @@ sentTo: someone@example.com
 trustedDevide: true
 retryStepUp: true
 stepUpMethod:
-  value: email
   # Possible values:
+  value: email
   # value: sms
   # value: external
 stepUpAlternatives:

@@ -52,8 +52,8 @@ attributeContract:
   ADDRESS:
     label: default
   ADDRESS_ALT:
-    label: billing
     # Possible values:
+    label: billing
     # label: business
     # label: home
     # label: postal
