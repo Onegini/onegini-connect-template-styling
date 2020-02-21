@@ -24,6 +24,7 @@ import com.onegini.styling.mocked.model.AddressField;
 public class SignUpUnPForm {
   private Map<String, String> customAttributes;
   private String firstName;
+  private String initials;
   private String lastName;
   private String birthDateDay;
   private String birthDateMonth;
