@@ -149,7 +149,7 @@ The `standalone-styling` will be available under the Spring Boot Dashboard.
 
 ## Advanced configuration
 
-For front-end development the springboot server can be run together with the Gulp taskrunner to see changes immediately.
+For front-end development the Spring Boot server can be run together with the Gulp task runner to see changes immediately.
 A python script has been created to load the configuration and start the project. It can also build a new JAR file.
 
 ### Prerequisites
