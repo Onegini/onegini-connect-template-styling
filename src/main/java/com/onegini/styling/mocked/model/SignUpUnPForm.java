@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 Onegini B.V.
+ * Copyright 2020 Onegini B.V.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,12 +17,19 @@
 package com.onegini.styling.mocked.model;
 
 import lombok.Data;
+import java.util.*;
+import com.onegini.styling.mocked.model.AddressField;
 
 @Data
 public class SignUpUnPForm {
+  private Map<String, String> customAttributes;
   private String firstName;
+  private String initials;
   private String lastName;
-  private String dateOfBirth;
+  private String birthDateDay;
+  private String birthDateMonth;
+  private String birthDateYear;
+  private String gender;
   private String postalCode;
   private String houseNumber;
   private boolean billingIsShippingAddress;
@@ -37,4 +44,6 @@ public class SignUpUnPForm {
   private String mobileNumberConfirmation;
   private boolean termsOfUse;
   private boolean newsletter;
+  private AddressField address;
+  private AddressField addressAlt1;
 }

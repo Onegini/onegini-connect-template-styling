@@ -5,8 +5,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Leon van der Noll",
-  "license": "ISC",
+  "author": "Onegini",
+  "license": "Apache2.0",
   "description": "Used to easily compile SCSS and Javascript with Browsersync",
   "devDependencies": {
     "@babel/core": "^7.5.5",

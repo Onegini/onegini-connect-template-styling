@@ -1,0 +1,4 @@
+applicationHost: http://localhost:8084
+resetUrl: https://www.onegini.com
+emailValidityMillis: 3600000000
+emails:

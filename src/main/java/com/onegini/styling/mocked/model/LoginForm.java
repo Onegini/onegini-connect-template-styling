@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 Onegini B.V.
+ * Copyright 2020 Onegini B.V.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,8 +20,9 @@ import lombok.Data;
 
 @Data
 public class LoginForm {
+  private String email;
+  private String username;
   private String password;
   private String confirmPassword;
-  private String email;
   private boolean optionalMobileLogin;
 }

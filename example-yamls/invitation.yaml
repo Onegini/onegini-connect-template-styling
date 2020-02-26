@@ -1,0 +1,29 @@
+organisation:
+  !!com.onegini.styling.mocked.model.Organisation
+  id: 1
+  name: Onegini
+  hasLogo: true
+  hasLogoLandscape: true
+  hasNoLogoLandscape: false
+isEmailConfirmationEnabled: true
+cancelTo: /personal/signup/cancel
+signUpUnPForm:
+  !!com.onegini.styling.mocked.model.SignUpUnPForm  
+  email:
+  emailConfirmation:
+  password:
+attributeContract:
+  EMAIL:
+    !!com.onegini.styling.mocked.model.OrganisationAttribute
+    id: 123456789
+    organisationId: 1
+    verificationRequired: false
+    label: email
+passwordPolicy:
+  !!com.onegini.styling.mocked.model.PasswordPolicy
+  minLength: 6
+  maxLength: 100
+  lowerCaseCharRequired: true
+  upperCaseCharRequired: true
+  specialCharRequired: true
+  digitRequired: true

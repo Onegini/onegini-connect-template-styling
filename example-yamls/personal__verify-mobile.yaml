@@ -1,0 +1,5 @@
+sentTo: +316231213
+profileAttributeId: 1
+targetUrl: /
+errors:
+  - code: personal.outcomeVerification.verificationCode.failed

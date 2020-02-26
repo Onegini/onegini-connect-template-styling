@@ -1,0 +1,4 @@
+clientId: 1
+scopes: apple-login
+redirectUri: /
+state: active

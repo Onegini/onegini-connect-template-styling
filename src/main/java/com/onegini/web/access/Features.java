@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 Onegini B.V.
+ * Copyright 2020 Onegini B.V.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -19,6 +19,9 @@ package com.onegini.web.access;
 public enum Features {
 
   SIGN_UP,
+  PERSON_NAME_MANDATORY,
+  PERSON_FIRST_NAME_MANDATORY,
+  PERSON_LAST_NAME_MANDATORY,
   STEP_UP_EXTERNALLY_DELIVERED_CODE,
   LOGIN,
   PERSON_API,
@@ -48,7 +51,6 @@ public enum Features {
   MOBILE_NUMBER_VERIFICATION,
   EMAIL_CONFIRMATION,
   MOBILE_NUMBER_CONFIRMATION,
-  PERSON_NAME_MANDATORY,
   SMS_PASSWORD_RESET,
   SMS_USERNAME_REMINDER,
   MOBILE_NUMBER_VALIDATION,
@@ -63,5 +65,4 @@ public enum Features {
   CUSTOM_EMAIL_VALIDATION,
   SIGN_UP_WITHOUT_INVITATION_VALIDATION,
   UI_EXTENSION_LOGIN;
-
 }

@@ -1,0 +1,4 @@
+emailVerificationCodeExists: true
+personInfo:
+  emailAddress: someone@example.com
+  emailAttributeId: 1

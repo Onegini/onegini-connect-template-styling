@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 Onegini B.V.
+ * Copyright 2020 Onegini B.V.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -24,4 +24,5 @@ public class Idp {
   private String name;
   private String type;
   private boolean enabled;
+  private boolean removable;
 }
