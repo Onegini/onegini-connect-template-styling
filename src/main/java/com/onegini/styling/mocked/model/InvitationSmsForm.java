@@ -21,4 +21,5 @@ import lombok.Data;
 @Data
 public class InvitationSmsForm {
   private String code;
+  private String personalCode;
 }

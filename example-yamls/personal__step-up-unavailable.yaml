@@ -1,3 +1,4 @@
+page: stepUp.sms
 retryStepUp: true
 stepUpMethod:
   # Possible values:

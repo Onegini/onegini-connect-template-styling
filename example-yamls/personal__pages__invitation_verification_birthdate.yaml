@@ -1,3 +1,4 @@
+page: invitation
 formSubmitPath: submit
 formObject:
   !!com.onegini.styling.mocked.model.BirthDateForm

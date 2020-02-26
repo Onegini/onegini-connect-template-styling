@@ -1,3 +1,4 @@
+page: idin
 selectBankForm:
   !!com.onegini.styling.mocked.model.SelectBankForm
   selectedIssuerId: 0

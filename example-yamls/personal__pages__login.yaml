@@ -1,6 +1,5 @@
-showMigrationMessage: true
-migrationMessage: If you already have an account, please use the migration code you received by email.
-message: personal.verification.mailSent
+page: login
+message: personal.resetPassword.email.sent
 messageType:
   value: success
 showLogin: true
@@ -13,8 +12,8 @@ showRemindUsername: true
 optionalMobileLogin: true
 showSignUp: true
 migrationLoginFlow: false
-optionalMobileLoginEnabled: true
-mobileLoginEnabled: true
+optionalMobileLoginEnabled: false
+mobileLoginEnabled: false
 loginForm:
   !!com.onegini.styling.mocked.model.LoginForm
   email:
@@ -23,7 +22,7 @@ loginForm:
 emailOnlyForm:
   !!com.onegini.styling.mocked.model.LoginForm
   email:
-showIdps: true
+showIdps: false
 idps:
   - !!com.onegini.styling.mocked.model.Idp
     id: 1234567

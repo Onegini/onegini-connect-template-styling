@@ -1,3 +1,4 @@
+page: stepUp.email
 sentTo: someone@example.com
 trustedDevide: true
 retryStepUp: true

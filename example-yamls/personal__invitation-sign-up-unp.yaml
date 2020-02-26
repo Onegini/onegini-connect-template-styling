@@ -1,3 +1,4 @@
+page: signup
 displayNameFields: true
 displayMobileNrOrPin: true
 isPinEnabled: true

@@ -1,3 +1,4 @@
+page: hint.idp
 emailOnlyForm:
   !!com.onegini.styling.mocked.model.EmailForm
   email:
