@@ -1,1 +1,17 @@
 page: registration.accountlink.error
+errorResponse:
+  errorMessage: custom extra error message
+  # Possible values:
+  errorCode: 0
+  # errorCode: 1000
+  # errorCode: 2000
+  # errorCode: 2010
+  # errorCode: 2020
+  # errorCode: 2021
+  # errorCode: 2030
+  # errorCode: 3000
+organisation:
+  name: Onegini
+  siteUrl: https://onegini.com
+  supportUrl: https://support.onegini.com/hc/en-us
+  supportEmail: support@onegini.com

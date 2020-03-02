@@ -1,1 +1,6 @@
 page: pin.blocked
+pinForm:
+  !!com.onegini.styling.mocked.model.PinForm
+  currentPin:
+  pin:
+  confirmPin:
