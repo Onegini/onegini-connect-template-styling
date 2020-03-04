@@ -1,5 +1,6 @@
 page: signup
 organisation:
+  name: Onegini
 isMigratingUser: false
 migrationLoginFlow: false
 personName: Henk
@@ -8,6 +9,7 @@ isMobileNumberConfirmationEnabled: true
 isPinEnabled: true
 isEmailConfirmationEnabled: true
 showExtendedFields: false
+showPasswordFields: true
 signUpUnPForm:
   !!com.onegini.styling.mocked.model.SignUpUnPForm
   firstName:

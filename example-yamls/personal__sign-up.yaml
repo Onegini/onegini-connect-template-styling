@@ -1,5 +1,6 @@
 page: registration
 organisation:
+  name: Onegini
 isMigratingUser: true
 migrationLoginFlow: false
 personName: Henk
