@@ -1,9 +1,0 @@
-page: idCheck
-personName:
-  firstName: John
-  lastName: Doe
-idCheckForm:
-  !!com.onegini.styling.mocked.model.IdCheckForm
-  documentType:
-  frontSide:
-  backSide:
