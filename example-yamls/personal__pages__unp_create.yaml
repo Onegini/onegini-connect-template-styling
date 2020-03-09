@@ -1,0 +1,13 @@
+passwordPolicy:
+  !!com.onegini.styling.mocked.model.PasswordPolicy
+  minLength: 6
+  maxLength: 100
+  lowerCaseCharRequired: true
+  upperCaseCharRequired: true
+  specialCharRequired: true
+  digitRequired: true
+passwordForm:
+  !!com.onegini.styling.mocked.model.SignUpUnPForm
+  email:
+  password:
+  confirmPassword:

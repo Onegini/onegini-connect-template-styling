@@ -19,7 +19,8 @@ package com.onegini.styling.mocked.model;
 import lombok.Data;
 
 @Data
-public class InvitationSmsForm {
-  private String code;
-  private String personalCode;
+public class PinForm {
+  private String currentPin;
+  private String pin;
+  private String confirmPin;
 }

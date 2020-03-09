@@ -1,3 +1,4 @@
+page: qrCodeLogin
 qrLoginConfiguration:
   !!com.onegini.styling.mocked.model.QRLoginConfiguration  
   enabled: true

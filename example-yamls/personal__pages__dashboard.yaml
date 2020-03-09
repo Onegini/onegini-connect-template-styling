@@ -1,3 +1,4 @@
+page: dashboard
 message: personal.verification.mailSent
 messageType:
   value: success

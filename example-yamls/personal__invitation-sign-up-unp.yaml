@@ -1,21 +1,10 @@
-displayNameFields: true
-displayMobileNrOrPin: true
-isPinEnabled: true
-mobileRequiredInAttributeContract: true
-verificationRequired: true
-isEmailConfirmationEnabled: false 
-isMobileNumberConfirmationEnabled: true
-migrationLoginFlow: false
-mobileMandatory: true
-passwordLabel: 
+page: signup
+organisation:
+  name: Onegini
 personName:
   !!com.onegini.styling.mocked.model.PersonInfo
   displayName: John Doe
-attributeContract:
-  PHONE:
-    !!com.onegini.styling.mocked.model.OrganisationAttribute
-    required: true
-    verificationRequired: true
+isPinEnabled: true
 signUpUnPForm:
   !!com.onegini.styling.mocked.model.SignUpUnPForm
   email:
@@ -27,6 +16,13 @@ signUpUnPForm:
   mobileNumber:
   mobileNumberConfirmation:
   termsOfUse: false
+isEmailConfirmationEnabled: false 
+isMobileNumberConfirmationEnabled: true
+attributeContract:
+  PHONE:
+    !!com.onegini.styling.mocked.model.OrganisationAttribute
+    required: true
+    verificationRequired: true
 passwordPolicy:
   !!com.onegini.styling.mocked.model.PasswordPolicy
   minLength: 6
@@ -35,3 +31,7 @@ passwordPolicy:
   upperCaseCharRequired: true
   specialCharRequired: true
   digitRequired: true
+fieldConfiguration:
+  TELEPHONE_NUMBER:
+    !!com.onegini.styling.mocked.model.FieldConfigurationAttribute
+    label:

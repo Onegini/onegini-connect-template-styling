@@ -1,0 +1,4 @@
+page: pin.temp
+inlineMessage: personal.fields.pin.error.wrong
+additional: personal.fields.captcha
+pinRemainingAttempts: 3

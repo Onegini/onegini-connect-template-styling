@@ -1,0 +1,4 @@
+bankIdLocalLinkPath: /
+formObject:
+  !!com.onegini.styling.mocked.model.InvitationSmsForm
+  personalCode:

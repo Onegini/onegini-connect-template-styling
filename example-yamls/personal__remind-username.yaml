@@ -1,3 +1,4 @@
+page: usernameReminder
 reCaptchaSiteKey: abcdef123
 remindUsernameForm:
   !!com.onegini.styling.mocked.model.MobileNumberUpdateForm

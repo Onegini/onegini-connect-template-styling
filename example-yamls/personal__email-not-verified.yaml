@@ -1,3 +1,4 @@
+page: email.not.verified
 emailVerificationCodeExists: true
 personInfo:
   emailAddress: someone@example.com

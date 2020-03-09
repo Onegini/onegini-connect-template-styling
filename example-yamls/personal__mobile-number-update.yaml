@@ -1,3 +1,4 @@
+page: updateMobileNumber
 mobileNumberOnlyForm:
   !!com.onegini.styling.mocked.model.MobileNumberUpdateForm
   mobileNumber: +31623456789

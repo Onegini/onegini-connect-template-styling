@@ -1,3 +1,4 @@
+page: invitation
 formSubmitPath: /
 textErrorCodeRequired: true
 textErrorCodeWrong: Incorrect code

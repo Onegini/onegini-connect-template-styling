@@ -1,0 +1,4 @@
+statusEndpoint: /status-endpoint
+errorEndpoint: /status-errorpoint
+pollInterval: 1000
+bankIdAppUrl: /

@@ -1,0 +1,18 @@
+page: features.unavailable
+feature:
+  # Possible values:
+  code: sign-up
+  # code: login
+  # code: accepting-invitation
+  # code: activation-after-signup
+  # code: migration
+  # code: id-check
+  # code: sms
+  # code: pin
+  # code: totp
+  # code: mobile-auth
+  # code: mobile-number-verification
+  # code: sms-username-reminder
+  # code: sms-password-reset
+  # code: enrich-attributes-after-second-login
+  # code: email-verification-required

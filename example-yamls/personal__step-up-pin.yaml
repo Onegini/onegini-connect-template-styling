@@ -1,3 +1,4 @@
+page: stepUp.pin
 trustedDevice: true
 pinRemainingAttempts: 3
 stepUpAlternatives:
