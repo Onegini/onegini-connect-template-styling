@@ -45,6 +45,10 @@ signUpUnPForm:
     city:
     region:
     country:
+  customAttributes:
+    customTextAttribute:
+    customNumberAttribute:
+    customCheckboxAttribute:
 attributeContract:
   PHONE:
     verificationRequired: false
@@ -84,3 +88,13 @@ countryCodes:
   - BE
   - DE
   - FR
+customAttributes:
+  - name: customTextAttribute
+    type: TEXT
+    editable: true
+  - name: customNumberAttribute
+    type: NUMBER
+    editable: true
+  - name: customCheckboxAttribute
+    type: CHECKBOX
+    editable: true
