@@ -1,1 +1,10 @@
 page: stepUp.preferred
+stepUpMethods:
+  pin: pin
+  sms: sms
+  email: email
+  timeBasedOneTimePassword: timeBasedOneTimePassword
+  mobileAuthentication: mobileAuthentication
+stepUpMethodsForm:
+  !!com.onegini.styling.mocked.model.StepUpMethodsForm
+  preferredStepUpMethod:
