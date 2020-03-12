@@ -3,17 +3,14 @@
 With this tool you can develop the Thymeleaf templates for Onegini Connect without running the actual products. This makes it possible to style
 a template without going through the flow to render a specific screen or trigger sending emails.
 
-## Build the project
+## Prerequisites
 
-You need the following to build the project:
+You need the following to run the project:
 * [Java 11](https://adoptopenjdk.net/)
 * [Apache Maven](https://maven.apache.org)
 * Access to Onegini Artifactory
-
-Build this project from its root directory:
-```bash
-mvn clean package
-```
+* Python 3.*
+* Node >= 12
 
 ## Setup
 
@@ -22,11 +19,21 @@ mvn clean package
 This is the location where all custom templates, messages and static resources for Onegini CIM are maintained. It has the following directory structure:
 
 * `email-templates`: custom templates that are used for emails
+* `js`: the scripts that are referenced by the custom templates which will be compiled
 * `messages`: properties files that contain translations for the custom templates.
     * `messages-personal-branding.properties`: default messages
     * `messages-personal-branding_nl.properties`: translations of messages for locale `nl` (optional, depends on which languages your CIM extension supports)
-* `static`: CSS, fonts, scripts and images that are referenced by the custom templates
+* `scss`: SCSS files that are referenced by the custom templates which will be compiled
+* `static`: assets that are referenced by the custom templates
+    * `css`: custom css files
+    * `fonts`: custom fonts
+    * `img`: custom images
 * `templates`: custom templates that are used for web pages
+    * `personal`: customer facing templates
+        * `components`: small bits of reusable code (like the csrf_token)
+        * `fragments`: bigger bits of reusable code (like reusable forms)
+        * `layouts`: layouts for the pages (uses Thymeleaf Layout Dialect)
+        * `pages`: custom pages
 
 The default location for the extension resources is `/opt/onegini-styling/extension-resources`. To set a different location use the environment variable 
 `STYLING_EXTENSIONRESOURCESLOCATION`.
@@ -117,45 +124,8 @@ request parameter `language` e.g. `&language=fr`.
 
 ## Run the project
 
-Run the project from the commandline.
-
-```bash
-mvn spring-boot:run
-```
-
-Then access the application via [http://localhost:8000](http://localhost:8000).
-
-You can pass configuration via environment variables. For example:
-
-```bash
-mvn spring-boot:run -DSTYLING_DEFAULTLOCALE=nl_NL
-``` 
-
-### IntelliJ IDEA
-
-Install the following plugins:
-* Spring Boot 
-* Lombok
-
-The `StylingApplication` will be available as Spring Boot application in the run configurations.
-
-### VS Code
-
-Install the following plugins:
-* [Spring Boot Dashboard](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-spring-boot-dashboard)
-* [Lombok Annotations Support for VS Code](https://marketplace.visualstudio.com/items?itemName=GabrielBB.vscode-lombok)
-
-The `standalone-styling` will be available under the Spring Boot Dashboard.
-
-## Advanced configuration
-
 For front-end development the Spring Boot server can be run together with the Gulp task runner to see changes immediately.
 A python script has been created to load the configuration and start the project. It can also build a new JAR file.
-
-### Prerequisites
-
-- Python >= 3.6
-- Node >= 12
 
 On first use, run `npm i` to install node dependencies.
 
@@ -164,7 +134,7 @@ On first use, run `npm i` to install node dependencies.
 As a default, the script looks for a `config.json` file in the root of this project.
 The configuration file can be used for different projects. 
 
-See `config_example.json` for an example on how to setup the config file.
+See `example.config.json` for an example on how to setup the config file.
 A value not specified in a project uses the value from `default`.
 
 ### Using the script

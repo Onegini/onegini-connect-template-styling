@@ -1,0 +1,23 @@
+{
+    "default": {
+        "STYLING_EXTENSIONRESOURCESLOCATION": "<Project folder>/target/classes/extension-resources",
+        "STYLING_EXTENSIONUNCOMPILEDLOCATION": "<Project folder>/src/main/resources/extension-resources",
+        "STYLING_CORERESOURCESLOCATION": "<Onegini Core Resouces>",
+        "STYLING_TEMPLATECONFIGLOCATION": "./example-yamls",
+        "STYLING_DEFAULTLOCALE": "en_GB",
+        "SERVER_PORT": "8084"
+    },
+    "project1": {
+        "STYLING_EXTENSIONRESOURCESLOCATION": "<Project folder>/target/classes/extension-resources",
+        "STYLING_EXTENSIONUNCOMPILEDLOCATION": "<Project folder>/src/main/resources/extension-resources",
+        "STYLING_CORERESOURCESLOCATION": "<Location of Onegini core resouces>",
+    },
+    "project2": {
+        "STYLING_EXTENSIONRESOURCESLOCATION": "<Project folder>/target/classes/extension-resources",
+        "STYLING_EXTENSIONUNCOMPILEDLOCATION": "<Project folder>/src/main/resources/extension-resources",
+    },
+    "project3": {
+        "STYLING_EXTENSIONRESOURCESLOCATION": "<Project folder>/target/classes/extension-resources",
+        "STYLING_EXTENSIONUNCOMPILEDLOCATION": "<Project folder>/src/main/resources/extension-resources",
+    }
+}
