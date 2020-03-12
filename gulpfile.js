@@ -24,28 +24,38 @@ const cleanCSS = require('gulp-clean-css');
 const sourceLocation = process.env.STYLING_EXTENSIONUNCOMPILEDLOCATION;
 const targetLocation = process.env.STYLING_EXTENSIONRESOURCESLOCATION;
 
-const compileSass = () => gulp.src(`${sourceLocation}/scss/**/*.scss`)
+const compileScss = () =>
+    gulp.src(`${sourceLocation}/scss/**/*.scss`)
     .pipe(sass().on('error', sass.logError))
     .pipe(cleanCSS())
     .pipe(gulp.dest(`${targetLocation}/static/css`));
 
-const copyHtml = () => gulp.src(`${sourceLocation}/templates/**/*.html`)
+const copyHtml = () =>
+    gulp.src(`${sourceLocation}/templates/**/*.html`)
     .pipe(gulp.dest(`${targetLocation}/templates`));
 
-const compileJs = () => gulp.src(`${sourceLocation}/static/js/**/*.js`)
+const copyEmails = () =>
+    gulp.src(`${sourceLocation}/email-templates/**/*.html`)
+    .pipe(gulp.dest(`${targetLocation}/email-templates`));
+
+const compileJs = () =>
+    gulp.src(`${sourceLocation}/js/**/*.js`)
     .pipe(babel({presets: ['@babel/preset-env']}))
     .pipe(uglify())
     .pipe(gulp.dest(`${targetLocation}/static/js`));
 
-const copyMessages = () => gulp.src(`${sourceLocation}/messages/*.properties`)
-.pipe(gulp.dest(`${targetLocation}/messages`));
+const copyMessages = () =>
+    gulp.src(`${sourceLocation}/messages/*.properties`)
+    .pipe(gulp.dest(`${targetLocation}/messages`));
 
-const copyAssets = () => gulp.src([`${sourceLocation}/static/**/*.*`, `!${sourceLocation}/static/js/**/*.js`])
-.pipe(gulp.dest(`${targetLocation}/static`));
+const copyAssets = () =>
+    gulp.src(`${sourceLocation}/static/**/*.*`)
+    .pipe(gulp.dest(`${targetLocation}/static`));
 
-const watchSass = () =>  watch(`${sourceLocation}/scss/**/*.scss`, gulp.series(compileSass, bs.reload));	
-const watchJs = () =>  watch(`${sourceLocation}/static/js/**/*.js`, gulp.series(compileJs, bs.reload));
+const watchSass = () =>  watch(`${sourceLocation}/scss/**/*.scss`, gulp.series(compileScss, bs.reload));	
+const watchJs = () =>  watch(`${sourceLocation}/js/**/*.js`, gulp.series(compileJs, bs.reload));
 const watchHtml = () => watch(`${sourceLocation}/templates/**/*.html`, gulp.series(copyHtml, bs.reload));
+const watchEmails = () => watch(`${sourceLocation}/email-templates/**/*.html`, gulp.series(copyEmails, bs.reload));
 const watchAssets = () => watch([`${sourceLocation}/static/**/*.*`, `!${sourceLocation}/static/JS/**/*.js`], gulp.series(copyAssets, bs.reload));
 const watchMessages = () => watch(`${sourceLocation}/messages/*.properties`, gulp.series(copyMessages, bs.reload));
 
@@ -53,8 +63,8 @@ const serve = () => bs.init({
     proxy: `http://localhost:${process.env.SERVER_PORT}/`
 });
 
-const build = gulp.parallel(compileSass, compileJs, copyHtml, copyAssets, copyMessages);
-const watcher = gulp.parallel(serve, watchSass, watchJs, watchHtml, watchAssets, watchMessages);
+const build = gulp.parallel(compileScss, compileJs, copyHtml, copyEmails, copyAssets, copyMessages);
+const watcher = gulp.parallel(serve, watchSass, watchJs, watchHtml, watchEmails, watchAssets, watchMessages);
 exports.build = build;
 exports.watcher = watcher;
 exports.default = gulp.series(build, watch);
