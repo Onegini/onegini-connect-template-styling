@@ -63,9 +63,9 @@ public class MvcConfig implements WebMvcConfigurer {
   }
 
   @Bean
-  public LocaleResolver localeResolver() {
+  public LocaleResolver localeResolver(final BrandAwareLocaleConverter localeConverter) {
     final SessionLocaleResolver slr = new SessionLocaleResolver();
-    slr.setDefaultLocale(stylingProperties.getDefaultLocale());
+    slr.setDefaultLocale(localeConverter.convert(stylingProperties.getDefaultLocale()));
     return slr;
   }
 

@@ -40,7 +40,7 @@ public class StylingProperties {
   private String tokenServerDefaultResourcesLocation;
   private String tokenServerCustomResourcesLocation;
   @NotNull
-  private Locale defaultLocale;
+  private String defaultLocale;
 
 
 }
