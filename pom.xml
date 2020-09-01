@@ -47,6 +47,7 @@
     <thymeleaf-layout-dialect.version>2.4.1</thymeleaf-layout-dialect.version>
     <snakeyaml.version>1.21</snakeyaml.version>
     <spring-boot.version>2.1.8.RELEASE</spring-boot.version>
+    <commons-beanutils.version>1.9.4</commons-beanutils.version>
 
     <maven-surefire-plugin.version>2.22.0</maven-surefire-plugin.version>
   </properties>
@@ -177,13 +178,19 @@
       <version>${idp-sdk.version}</version>
     </dependency>
 
+    <dependency>
+      <groupId>commons-beanutils</groupId>
+      <artifactId>commons-beanutils</artifactId>
+      <version>${commons-beanutils.version}</version>
+    </dependency>
+
   </dependencies>
   <build>
     <plugins>
       <plugin>
         <groupId>com.github.eirslett</groupId>
         <artifactId>frontend-maven-plugin</artifactId>
-        <version>1.8.0</version> 
+        <version>1.8.0</version>
         <configuration>
           <installDirectory>${project.build.outputDirectory}</installDirectory>
         </configuration>
