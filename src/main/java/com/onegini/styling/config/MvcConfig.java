@@ -58,7 +58,7 @@ public class MvcConfig implements WebMvcConfigurer {
         FILE + stylingProperties.getTokenServerCustomResourcesLocation() + "/messages/messages",
         FILE + stylingProperties.getTokenServerDefaultResourcesLocation() + "/messages/messages");
     messageSource.setCacheSeconds(1);
-
+    messageSource.setDefaultEncoding("UTF-8");
     return messageSource;
   }
 
