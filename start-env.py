@@ -8,7 +8,7 @@ import time
 import signal
 
 parser = argparse.ArgumentParser(description='Set environment variables for use with springboot, mvn and npm.')
-parser.add_argument('-e', '--environment', help='Set the environment to load. Use the name as set in configutation. When omitted uses configured defaults', required=False)
+parser.add_argument('-e', '--environment', help='Set the environment to load. Use the name as set in configuration. When omitted uses configured defaults', required=False)
 parser.add_argument('-c', '--config', help='Set the configuration file to load. Defaults to config.json', required=False)
 parser.add_argument('-b', '--build', help='Build new JAR for project', action='store_true', required=False)
 arguments = parser.parse_args()
